@@ -1,65 +1,55 @@
-# Triển Khai
+# Triển Khai — An Khang Việt Content OS
 
-Thực thi một kế hoạch đã được tạo bởi `/create-plan`. Đọc kỹ kế hoạch, làm từng bước theo đúng thứ tự và báo cáo lại phần công việc đã hoàn thành.
+Thực thi một kế hoạch đã tạo bởi `/create-plan`.
 
 ## Biến Đầu Vào
 
-plan_path: $ARGUMENTS (đường dẫn tới file kế hoạch, ví dụ `plans/2026-01-28-add-guest-research-command.md`)
+`plan_path: $ARGUMENTS`
 
----
+## Giai Đoạn 1: Hiểu Kế Hoạch
 
-## Hướng Dẫn
+1. Đọc toàn bộ file plan.
+2. Kiểm tra trạng thái plan phải là `Draft` hoặc `Ready`.
+3. Đọc `AKV-content.md`, `CLAUDE.md` và context liên quan.
+4. Kiểm tra “Câu hỏi mở”. Nếu còn câu hỏi làm thay đổi nội dung hoặc dữ kiện, dừng lại và hỏi user.
+5. Xác định file sẽ tạo/sửa/xóa, tránh chạm file ngoài scope.
 
-### Giai Đoạn 1: Hiểu Kế Hoạch
+## Giai Đoạn 2: Thực Thi
 
-1. **Đọc toàn bộ file kế hoạch.** Không được lướt qua.
-2. **Kiểm tra điều kiện tiên quyết:**
-   - Có câu hỏi mở nào cần được trả lời trước khi triển khai không?
-   - Có phụ thuộc vào tài nguyên ngoài hay quyết định từ user không?
-   - Nếu có blocker, dừng lại và hỏi user.
-3. **Xác nhận kế hoạch đã sẵn sàng:**
-   - Trạng thái phải là `Draft` hoặc `Ready`
-   - Tất cả các phần phải đã được điền đầy đủ
+Làm đúng thứ tự trong plan. Với mỗi hạng mục:
 
----
+- Nếu tạo post, dùng chuẩn `posts/README.md`.
+- Nếu tạo carousel, tạo `content.json` đúng schema và dùng tiếng Việt có dấu.
+- Nếu tạo visual tốn API, chỉ làm khi kế hoạch hoặc user đã duyệt text.
+- Nếu thiếu dữ kiện thật về giá/case/vật tư/chính sách, ghi placeholder cần user bổ sung hoặc viết ở mức nguyên tắc, không tự bịa.
+- Nếu chỉnh workflow, cập nhật `CLAUDE.md` hoặc README liên quan nếu cấu trúc thay đổi.
 
-### Giai Đoạn 2: Thực Thi Kế Hoạch
+## Giai Đoạn 3: Kiểm Tra Voice
 
-1. **Làm theo phần Step-by-Step Tasks đúng thứ tự.**
-   - Hoàn thành trọn vẹn từng bước rồi mới sang bước tiếp theo
-   - Nếu một bước yêu cầu tạo file, hãy tạo file hoàn chỉnh chứ không tạo stub
-   - Nếu một bước yêu cầu sửa file, hãy đọc file trước rồi chỉnh chính xác
+Mỗi nội dung hoàn chỉnh phải qua checklist:
 
-2. **Với mỗi task:**
-   - Đọc những file bị ảnh hưởng
-   - Thực hiện thay đổi đã nêu
-   - Tự kiểm tra thay đổi trước khi tiếp tục
+- Hook có rõ và chạm nỗi đau không?
+- Có đúng nhóm chủ nhà mục tiêu không?
+- Có phân tích bản chất vấn đề không?
+- Có checklist/câu hỏi/lời khuyên cụ thể không?
+- CTA có mềm, không ép inbox không?
+- Có câu nào quảng cáo lố hoặc cam kết vô căn cứ không?
+- Có dữ kiện nào bị bịa không?
 
-3. **Xử lý vấn đề một cách hợp lý:**
-   - Nếu không thể làm đúng như kế hoạch, ghi rõ vấn đề và thích nghi nếu ý định vẫn rõ
-   - Nếu không chắc nên làm gì, hỏi user thay vì đoán
-   - Ghi nhận mọi điểm lệch so với kế hoạch
+## Giai Đoạn 4: Kiểm Tra Kỹ Thuật
 
----
+- Chạy `python scripts/build-dashboard.py` nếu có post mới hoặc cập nhật post.
+- Với carousel, chạy `python scripts/generate-carousel.py --json <content.json> --output <carousel.pdf>`.
+- Kiểm tra tiếng Việt có dấu trong file output.
+- Rà lại file đã thay đổi bằng `git diff`.
 
-### Giai Đoạn 3: Kiểm Tra
+## Giai Đoạn 5: Cập Nhật Plan
 
-1. **Chạy qua Validation Checklist** trong kế hoạch
-2. **Kiểm tra Success Criteria** đã đạt hay chưa
-3. **Rà soát cross-reference và độ nhất quán:**
-   - Đảm bảo file mới được tham chiếu ở đúng nơi cần thiết
-   - Kiểm tra xem `CLAUDE.md` có cần cập nhật nếu cấu trúc workspace thay đổi không
-
----
-
-### Giai Đoạn 4: Cập Nhật Trạng Thái Kế Hoạch
-
-Sau khi triển khai xong, cập nhật lại file kế hoạch:
-
-1. Đổi `**Status:** Draft` thành `**Status:** Implemented`
-2. Thêm phần `Implementation Notes` ở cuối:
+Sau khi hoàn tất, cập nhật file plan:
 
 ```markdown
+**Trạng thái:** Implemented
+
 ---
 
 ## Implementation Notes
@@ -68,25 +58,23 @@ Sau khi triển khai xong, cập nhật lại file kế hoạch:
 
 ### Summary
 
-<Tóm tắt ngắn điều đã làm>
+<Tóm tắt ngắn>
 
 ### Deviations from Plan
 
-<Liệt kê mọi thay đổi khác với kế hoạch, hoặc "None">
+<Liệt kê hoặc “Không có”>
 
 ### Issues Encountered
 
-<Liệt kê mọi vấn đề gặp phải và cách xử lý, hoặc "None">
+<Liệt kê hoặc “Không có”>
 ```
 
----
+## Báo Cáo Cuối
 
-## Báo Cáo
+Báo cáo:
 
-Sau khi triển khai, hãy cung cấp:
-
-1. **Tóm tắt:** Danh sách bullet các phần việc đã hoàn thành
-2. **Các file đã thay đổi:** Liệt kê tất cả file tạo mới, sửa hoặc xóa
-3. **Kết quả kiểm tra:** Trạng thái của từng mục trong checklist
-4. **Điểm lệch:** Những chỗ khác với kế hoạch ban đầu
-5. **Bước tiếp theo:** Mọi việc follow-up còn cần làm
+1. Tóm tắt phần đã làm.
+2. File đã tạo/sửa/xóa.
+3. Kết quả kiểm tra.
+4. Điểm lệch so với plan.
+5. Việc cần user bổ sung nếu có dữ kiện còn thiếu.

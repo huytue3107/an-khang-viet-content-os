@@ -1,69 +1,56 @@
-# Hồ Sơ
+# Hồ Sơ — An Khang Việt Content
 
-_Cập nhật lần cuối: [DATE] — Điền ngày bạn setup_
+_Cập nhật lần cuối: 2026-04-29_
+_Nguồn chính: `AKV-content.md`_
 
-> **Hướng dẫn:** Điền thông tin của bạn vào các trường `[...]` bên dưới.
-> File này được đọc bởi `/prime` mỗi khi bắt đầu session.
-> Bạn có thể chạy `/init-context [URL_PROFILE]` để tự động điền từ dữ liệu scrape.
+## Danh Tính
 
----
+**Thương hiệu nội dung:** An Khang Việt Content
+**Văn phong:** Chuyên Gia Xây Nhà
+**Vai trò xuất hiện trong nội dung:** Chuyên gia tư vấn thiết kế và xây nhà trọn gói
+**Ngôn ngữ:** Tiếng Việt có dấu
+**Thị trường:** Việt Nam
 
-## Bạn Là Ai
+An Khang Việt Content nói với người đang chuẩn bị xây, sửa, thiết kế hoặc chọn nhà thầu. Nội dung phải làm chủ nhà thấy mình được bảo vệ: hiểu hơn, hỏi đúng hơn, kiểm tra kỹ hơn và bớt rơi vào phần mập mờ của ngành xây dựng.
 
-**Họ tên:** [TÊN ĐẦY ĐỦ]
-**Tên dùng công khai:** [TÊN THƯƠNG HIỆU — ví dụ: "Nguyễn Nam - AI Expert"]
-**Khu vực:** [THÀNH PHỐ, QUỐC GIA]
-**Vai trò chuyên môn:** [VAI TRÒ — ví dụ: Founder, CEO, Content Creator, Educator, Consultant]
-**Bối cảnh:** [MÔ TẢ NGẮN về bạn làm gì, cho ai, và tại sao — 2-3 câu cụ thể]
+## Định Vị
 
----
+An Khang Việt không viết để khoe mình giỏi. An Khang Việt viết để chủ nhà bớt mơ hồ, bớt mất tiền oan và có thêm niềm tin trước khi đặt viên gạch đầu tiên.
 
-## Cấu Trúc Thương Hiệu
+Tính cách thương hiệu:
 
-**Thương hiệu nội dung công khai:** [BRAND_NAME]
-**Tagline:** "[TAGLINE — câu định vị ngắn gọn của bạn]"
-**Thương hiệu công ty (nếu có):** [COMPANY_NAME]
-**Tagline công ty:** "[COMPANY_TAGLINE]"
-**Hình ảnh chính trong content:** [Mô tả bạn muốn được nhìn nhận như thế nào — 1-2 câu]
+- Có nghề thật.
+- Nói dễ hiểu.
+- Đứng về phía chủ nhà.
+- Thẳng thắn nhưng không xúc phạm.
+- Cảnh báo thực tế nhưng không hù dọa.
+- Bán hàng mềm, không ép inbox.
 
----
+## Cách Xưng Hô
 
-## Kênh Chính Thức
+- Facebook/Zalo tư vấn: “chủ nhà”, “bạn”, “anh em”.
+- Video ngắn: “anh chị”, “chủ nhà”, “mình”.
+- Bài thương hiệu/quy trình: “An Khang Việt”, “chúng tôi”.
+- Bài tranh luận: “nhiều người”, “không ít chủ nhà”, “có một sự thật hơi khó nghe”.
 
-| Kênh            | URL                | Mục đích                           |
-| --------------- | ------------------ | ---------------------------------- |
-| Website cá nhân | [WEBSITE_URL]      | [Hub, media kit, dịch vụ, v.v.]    |
-| Website công ty | [COMPANY_URL]      | [B2B, sản phẩm, dịch vụ, v.v.]     |
-| TikTok          | [TIKTOK_URL]       | [Reach rộng, video ngắn, v.v.]     |
-| Facebook        | [FACEBOOK_URL]     | [Trust, nội dung viết, v.v.]       |
-| YouTube         | [YOUTUBE_URL]      | [Authority dài hạn, tutorial v.v.] |
+## Kênh Nội Dung
 
----
+| Kênh | Mức ưu tiên | Mục đích |
+| --- | --- | --- |
+| Facebook | Cao | Tạo niềm tin, tăng lưu bài, tạo inbox tư vấn |
+| TikTok/Reels | Cao | Script ngắn, hook mạnh, giải thích vấn đề xây nhà dễ hiểu |
+| Zalo | Cao | Chăm sóc lead, tư vấn gọn, nhắc checklist và quy trình |
+| Website | Trung bình | Bài tư vấn dài, case study, nội dung authority |
+| Email/Inbox | Trung bình | Tư vấn cá nhân hóa, follow-up khách đang cân nhắc |
 
-## Nền Tảng Nội Dung
+## Lời Hứa Nội Dung
 
-| Nền tảng  | Mức ưu tiên | Tệp khán giả     | Trọng tâm nội dung |
-| --------- | ----------- | ---------------- | ------------------ |
-| [Kênh 1]  | Cao         | [Mô tả audience] | [Loại nội dung]    |
-| [Kênh 2]  | Cao         | [Mô tả audience] | [Loại nội dung]    |
-| [Kênh 3]  | Trung bình  | [Mô tả audience] | [Loại nội dung]    |
-| [Kênh 4]  | Thấp        | Tệp phụ          | Repurpose          |
+Mỗi bài viết phải giúp chủ nhà hiểu rõ hơn ít nhất một điều: nên hỏi gì, nên kiểm tra gì, nên tránh gì, hoặc nên làm rõ với nhà thầu trước khi ký.
 
----
+## Cần Tránh
 
-## Giọng Điệu Và Cá Tính
-
-**Tông giọng:** [VÍ DỤ: Gần gũi, trực diện, thực dụng, tự tin]
-**Phong cách:** [VÍ DỤ: Dùng ví dụ thật, ưu tiên rõ ràng hơn trau chuốt, tập trung vào hành động được ngay]
-**Cách xưng hô mặc định:** [VÍ DỤ: "mình", "bạn", "các bạn"]
-**Lời hứa thương hiệu:** [Điều bạn cam kết với audience — 1 câu]
-**Cần tránh:** [Liệt kê phong cách, ngôn ngữ, hoặc chủ đề bạn không muốn trong content]
-**Mẫu tham chiếu viết:** [Người viết/creator nào bạn muốn học phong cách — xem `reference/` để thêm guide]
-
----
-
-## Ảnh Cá Nhân
-
-Ảnh cá nhân nằm trong `context/images/`. Ưu tiên dùng cho các bài mà sự xuất hiện của bạn làm tăng độ tin cậy — bài học cá nhân, hậu trường, sự kiện, cập nhật, chia sẻ quan điểm.
-
-Xem `context/images/README.md` để biết cách thêm ảnh.
+- Từ ngữ quảng cáo lố: “số 1”, “rẻ nhất”, “bao đẹp”, “chốt đơn ngay”.
+- Cam kết tuyệt đối khi không có dữ kiện.
+- Case study, báo giá, vật tư, tiến độ hoặc chính sách bảo hành tự bịa.
+- Câu chữ quá kỹ thuật khiến người đọc bỏ cuộc.
+- Giọng khoe đạo đức nghề nghiệp hoặc đứng trên bục giảng.

@@ -1,23 +1,33 @@
-# Prime
+# Prime — An Khang Việt Content OS
 
-> Thực hiện các phần dưới đây để hiểu workspace, sau đó tóm tắt lại nhận định của bạn.
+Khởi tạo session mới bằng cách nạp đúng bối cảnh An Khang Việt trước khi làm bất kỳ task nội dung nào.
 
-## Chạy Lệnh
+## Chạy Lệnh Khảo Sát
 
-ls -la
-find . -type f -name "\*.md" | head -20
+```powershell
+Get-ChildItem -Force
+Get-ChildItem -Recurse -File -Include *.md | Select-Object -First 30 -ExpandProperty FullName
+```
 
-## Cần Đọc
+## Bắt Buộc Đọc
 
-CLAUDE.md
-./context
+1. `AKV-content.md` — master style guide, nguồn sự thật cao nhất.
+2. `CLAUDE.md` — hướng dẫn vận hành repo.
+3. `context/profile.md`
+4. `context/business.md`
+5. `context/icp.md`
+6. `context/strategy.md`
+7. `context/voice-analysis.md`
+8. `context/metrics.md`
 
-## Phần Tóm Tắt
+## Cần Xác Nhận Sau Khi Đọc
 
-Sau khi đọc xong, hãy trả lời:
+Trả lời ngắn gọn:
 
-1. Tóm tắt ngắn gọn tôi là ai, workspace này dùng để làm gì và vai trò của bạn là gì
-2. Giải thích cách bạn hiểu cấu trúc workspace và mục đích của từng phần/chủng file
-3. Liệt kê các command hiện có
-4. Tóm tắt chiến lược và ưu tiên hiện tại của tôi/chúng ta
-5. Xác nhận bạn đã sẵn sàng hỗ trợ tôi theo đúng mục tiêu của workspace này
+1. An Khang Việt Content là gì và voice chính là gì.
+2. 8 tệp khách hàng mở rộng trong mục 3.2-3.7 của `AKV-content.md`.
+3. 5 trụ cột nội dung hiện tại.
+4. Công thức chọn kịch bản theo mục tiêu: tạo tin tưởng, lưu bài, inbox, tranh luận.
+5. Quy tắc quan trọng nhất khi viết: không bịa báo giá/case/cam kết, CTA mềm, nội dung phải có ích.
+6. Các command và workflow chính trong workspace.
+7. Xác nhận đã sẵn sàng viết/lập kế hoạch theo văn phong **Chuyên Gia Xây Nhà**.

@@ -1,42 +1,50 @@
-# Tài Liệu Tham Chiếu
+# Reference — An Khang Việt Content
 
-Thư mục này chứa style guide, visual reference và các ví dụ copywriting để workspace dùng làm chuẩn khi tạo nội dung.
+Thư mục này chứa visual reference, ví dụ packaging và tài liệu phụ cho workflow nội dung.
 
-## Các File Cần Có
+Nguồn sự thật về voice vẫn là `AKV-content.md`. Tài liệu trong `reference/` chỉ hỗ trợ đóng gói ý tưởng hoặc visual, không được thay thế style guide AKV.
 
-### Ảnh Tham Chiếu Infographic
+## Ảnh Tham Chiếu Infographic
 
-Thêm 3 ảnh reference để định nghĩa visual style của thương hiệu. Các ảnh này sẽ được dùng làm `reference_image` khi tạo infographic bằng Kie.ai, giúp đầu ra đồng bộ hơn với brand.
+Ba ảnh sau được dùng làm `reference_image` khi tạo infographic bằng Kie.ai:
 
-- `infographic-ref-1.jpeg` — Kiểu layout 1 (ví dụ: bố cục tròn/radial)
-- `infographic-ref-2.jpeg` — Kiểu layout 2 (ví dụ: các thành phần bao quanh headline trung tâm)
-- `infographic-ref-3.jpeg` — Kiểu layout 3 (ví dụ: luồng dọc/vertical flow)
+- `infographic-ref-1.jpeg` — layout radial hoặc checklist trung tâm.
+- `infographic-ref-2.jpeg` — layout headline lớn, các ý xung quanh.
+- `infographic-ref-3.jpeg` — layout flow dọc, từng bước rõ ràng.
 
-**Cách tạo:**
+Khi có brand guideline thật, thay ba ảnh này bằng style AKV chính thức:
 
-1. Chọn 3 style infographic bạn thực sự thích
-2. Tạo hoặc đặt làm 3 infographic theo đúng màu sắc và gu thương hiệu của bạn
-3. Cả 3 phải cùng chung palette nhưng khác bố cục
-4. Lưu vào đây dưới đúng tên file quy định
+- Nền sáng trung tính.
+- Accent xanh xây dựng hoặc vàng đất nhẹ.
+- Chữ rõ, dễ đọc trên mobile.
+- Có tín hiệu ngành xây nhà: bản vẽ, grid, thước, checklist, khối nhà, vật liệu.
 
-### Slide Tham Chiếu Cho Carousel
+## Carousel Reference
 
-Thêm các slide ví dụ vào `carousel-ref/` để xác lập style carousel:
+`carousel-ref/` chứa slide tham chiếu và phân tích style. Carousel AKV nên ưu tiên:
 
-- Lưu từng slide thành `slide-00.jpg`, `slide-01.jpg`, v.v.
-- Viết phân tích style trong `carousel-style-analysis.md`
+- Hook lưu bài.
+- 5-9 điểm kiểm tra.
+- Mỗi slide một ý.
+- CTA mềm ở cuối.
+- Tiếng Việt có dấu, không quá tải chữ.
 
-### Ảnh Tham Chiếu Dạng Ảnh Cá Nhân Có Text Overlay (tùy chọn)
+## Tư Liệu Phụ
 
-Nếu muốn tạo kiểu bài có text chèn lên ảnh cá nhân:
+Các file ví dụ copywriting hoặc packaging cũ có thể giữ lại để học cấu trúc hook/bố cục, nhưng không còn là chuẩn giọng viết mặc định.
 
-- Thêm ví dụ dưới dạng `me-with-text-ref-1.jpeg`, v.v.
+Khi dùng tài liệu phụ:
 
-## Các File Đã Có Sẵn
+- Chỉ mượn cấu trúc đóng gói.
+- Thay substance bằng chủ đề xây nhà/sửa nhà/thiết kế/nhà thầu.
+- Viết lại hoàn toàn theo `AKV-content.md`.
+- Không đưa giọng cá nhân của tác giả khác vào nội dung AKV.
 
-### Tài Liệu Tham Chiếu Về Giọng Viết
+## Lệnh Tạo Infographic
 
-- `adam-robinson-writing-style.md` — Tài liệu phân tích chi tiết phong cách viết LinkedIn của Adam Robinson
-- `adam-robinson-top-posts.md` — Bộ ví dụ bài hiệu quả cao để học cách đóng gói hook, thân bài và nhịp CTA
-
-Đây là tài liệu học phong cách viết, không phải nội dung cá nhân của bạn. Có thể giữ lại để học hoặc thay bằng bộ tham chiếu riêng của bạn sau này.
+```powershell
+python scripts/generate-infographic.py `
+  --reference reference/infographic-ref-1.jpeg `
+  --output posts/NNN-slug/image.png `
+  --prompt "Checklist 5 điều chủ nhà cần kiểm tra trước khi ký hợp đồng xây nhà..."
+```

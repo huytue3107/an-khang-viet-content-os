@@ -104,7 +104,9 @@ def build_card(post_dir):
     if len(carousel_slides) > 0:
         visual_html = build_carousel_html(carousel_slides)
     elif os.path.exists(image_path):
-        visual_html = f'<img src="{image_to_base64(image_path)}" alt="Post image" class="post-image">'
+        visual_html = f'<img src="{image_to_base64(image_path)}" alt="AKV post image" class="post-image">'
+    else:
+        visual_html = '<span class="no-visual">Chưa có visual</span>'
 
     post_text_html = post_text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("\n", "<br>")
     post_num = slug.split("-")[0] if slug[0].isdigit() else slug
@@ -115,7 +117,7 @@ def build_card(post_dir):
             <span class="card-num">{post_num}</span>
             <button class="copy-btn" onclick="copyText(this)">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                Copy
+                Copy bài
             </button>
             <textarea class="hidden-text" style="display:none">{post_text}</textarea>
         </div>
@@ -148,11 +150,11 @@ def build_html():
         rows_html += f'<div class="row">{left}{right}</div>\n'
 
     html = f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Dashboard</title>
+    <title>An Khang Việt Content OS</title>
     <style>
         * {{ margin: 0; padding: 0; box-sizing: border-box; }}
 
@@ -361,7 +363,7 @@ def build_html():
     </style>
 </head>
 <body>
-    <h1>Content Dashboard</h1>
+    <h1>An Khang Việt Content OS</h1>
     {rows_html}
 
     <script>
@@ -371,7 +373,7 @@ def build_html():
                 btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Copied!';
                 btn.classList.add('copied');
                 setTimeout(() => {{
-                    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> Copy';
+                    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> Copy bài';
                     btn.classList.remove('copied');
                 }}, 2000);
             }});

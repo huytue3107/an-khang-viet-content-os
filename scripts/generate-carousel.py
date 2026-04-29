@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
-Generate a LinkedIn carousel PDF with a clean, professional style.
+Generate an An Khang Viet carousel PDF with a clean, practical style.
 
-Style: Cream background, serif typography, minimalist geometric illustrations,
-accent color highlights, brand banner.
+Style: light neutral background, construction-inspired geometry, clear typography,
+dark green / earth-tone accents, brand banner.
 
 Usage:
     python3 scripts/generate-carousel.py --json content.json --output posts/001-test/carousel.pdf
     python3 scripts/generate-carousel.py  # uses built-in demo content
 
-Dimensions: 1080x1350px (4:5 LinkedIn carousel standard)
+Dimensions: 1080x1350px (4:5 social carousel standard)
 
-Customize: Edit the BRAND section below to match your brand.
+Brand section is prefilled for An Khang Viet and can be adjusted when official visual guidelines are available.
 """
 
 import json
@@ -23,21 +23,21 @@ import textwrap
 from PIL import Image, ImageDraw, ImageFont
 
 # ============================================================
-# BRAND CUSTOMIZATION — Edit these values for YOUR brand
+# BRAND CUSTOMIZATION — An Khang Viet defaults
 # ============================================================
-BRAND_NAME = "YOUR BRAND"               # Appears on banner — CHANGE THIS
-AUTHOR_NAME = "Your Name"               # Appears on CTA slide — CHANGE THIS
-AUTHOR_ROLE = "Founder, Your Company"   # Appears on CTA slide — CHANGE THIS
+BRAND_NAME = "AN KHANG VIET"            # ASCII brand mark for reliable font rendering
+AUTHOR_NAME = "An Khang Việt"
+AUTHOR_ROLE = "Tư vấn thiết kế và xây nhà trọn gói"
 
 # --- BRAND COLORS (RGB) ---
-BG = (245, 243, 238)       # #F5F3EE cream background
-TEXT = (26, 26, 26)         # #1A1A1A black text
-ACCENT = (200, 230, 74)    # #C8E64A lime green — CHANGE THIS to your accent color
-SUBTLE_GREEN = (232, 240, 216)  # Light accent for decorative circles
-BANNER = (26, 26, 26)      # #1A1A1A dark banner
+BG = (247, 244, 236)       # #F7F4EC warm neutral background
+TEXT = (31, 37, 32)         # #1F2520 deep charcoal green
+ACCENT = (47, 107, 79)      # #2F6B4F construction green
+SUBTLE_GREEN = (224, 235, 226)  # Light green for decorative circles
+BANNER = (31, 37, 32)       # #1F2520 dark banner
 WHITE = (255, 255, 255)
-GRAY = (120, 120, 120)     # #787878
-LIGHT_CIRCLE = (225, 222, 215)  # Decorative circles
+GRAY = (96, 102, 95)        # #60665F
+LIGHT_CIRCLE = (219, 207, 182)  # Earth-tone decorative circles
 # ============================================================
 
 # --- DIMENSIONS ---
@@ -372,7 +372,7 @@ def make_cover_slide(title, emphasis=None):
     draw_accent_dot(draw, W // 2, dot_y, 10)
 
     f_hint = font_sans(20)
-    hint = "swipe to read"
+    hint = "lướt để xem"
     tw = text_width(hint, f_hint)
     draw.text(((W - tw) // 2, H - 140), hint, font=f_hint, fill=GRAY)
     arrow_y = H - 118
@@ -506,47 +506,47 @@ def generate_carousel(content, output_path):
 
 # --- DEMO CONTENT ---
 DEMO_CONTENT = {
-    "title": "7 AI Tools That 10x'd My Productivity",
-    "title_emphasis": "AI Tools",
+    "title": "7 điều cần kiểm tra trước khi ký hợp đồng xây nhà",
+    "title_emphasis": "7 điều",
     "slides": [
         {
             "number": 1,
-            "heading": "Claude for Writing",
-            "subtitle": "AI that actually understands nuance and context.",
-            "takeaway": "I went from 4 hours drafting to 30 minutes editing. The quality got better, not worse.",
+            "heading": "Phạm vi công việc",
+            "subtitle": "Hợp đồng phải ghi rõ bên thi công làm những hạng mục nào và không làm hạng mục nào.",
+            "takeaway": "Cái gì không ghi rõ hôm nay, rất dễ thành phát sinh ngày mai.",
         },
         {
             "number": 2,
-            "heading": "Notion AI for Knowledge",
-            "subtitle": "Your second brain that never forgets anything.",
-            "takeaway": "Every meeting, every idea, every decision -- instantly searchable and connected.",
+            "heading": "Chủng loại vật tư",
+            "subtitle": "Đừng chỉ ghi chung chung như thép, gạch, sơn. Cần rõ thương hiệu, quy cách và tiêu chuẩn.",
+            "takeaway": "Vật tư càng rõ, ví tiền của chủ nhà càng được bảo vệ.",
         },
         {
             "number": 3,
-            "heading": "Midjourney for Visuals",
-            "subtitle": "Professional-grade images in seconds, not days.",
-            "takeaway": "Cancelled my design subscription. AI does 80% of the work.",
+            "heading": "Điều kiện phát sinh",
+            "subtitle": "Phát sinh trong trường hợp nào, cách tính ra sao, ai xác nhận trước khi làm.",
+            "takeaway": "Đừng để phần mập mờ hôm nay thành cuộc cãi nhau ngày mai.",
         },
         {
             "number": 4,
-            "heading": "n8n for Automation",
-            "subtitle": "Connect every tool. Automate every workflow.",
-            "takeaway": "100+ hours saved per month. The robots do the boring stuff.",
+            "heading": "Tiến độ thanh toán",
+            "subtitle": "Thanh toán nên bám theo tiến độ thực tế, không chỉ theo lời hứa trên giấy.",
+            "takeaway": "Tiền đi theo việc đã rõ thì chủ nhà đỡ hồi hộp hơn.",
         },
         {
             "number": 5,
-            "heading": "ElevenLabs for Voice",
-            "subtitle": "Clone your voice. Scale your presence.",
-            "takeaway": "One recording session. Unlimited content. My voice is everywhere I'm not.",
+            "heading": "Nghiệm thu và bảo hành",
+            "subtitle": "Cần rõ nghiệm thu từng giai đoạn, ai chịu trách nhiệm và xử lý sau bàn giao thế nào.",
+            "takeaway": "Một công trình tử tế không kết thúc ở ngày nhận chìa khóa.",
         },
     ],
-    "cta_text": f"Follow {AUTHOR_NAME} for more insights.",
-    "cta_subtitle": "Repost this to help your network level up.",
+    "cta_text": "Lưu lại trước khi làm việc với nhà thầu.",
+    "cta_subtitle": "Nếu đang có báo giá còn lăn tăn, inbox An Khang Việt để được gợi ý điểm cần kiểm tra.",
 }
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Generate LinkedIn carousel PDF")
+    parser = argparse.ArgumentParser(description="Generate An Khang Viet carousel PDF")
     parser.add_argument("--json", help="Path to JSON content file")
     parser.add_argument("--output", default="outputs/carousel-test.pdf", help="Output PDF path")
     args = parser.parse_args()

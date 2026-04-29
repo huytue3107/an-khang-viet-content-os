@@ -1,231 +1,154 @@
-# Tạo Batch 10 Nội Dung
+# Tạo Batch 10 Nội Dung — An Khang Việt
 
-Tạo 10 nội dung sẵn sàng xuất bản trong một lần chạy.
+Tạo 10 nội dung sẵn sàng biên tập/xuất bản theo văn phong **Chuyên Gia Xây Nhà**.
 
-Mỗi nội dung phải tự đứng được một mình, không phụ thuộc vào follow-up như "comment X để lấy tài liệu" hay "nhắn tin mình để nhận file".
+## Bắt Buộc Đọc Trước
 
-## Cơ Cấu Nội Dung
+1. `AKV-content.md`
+2. `CLAUDE.md`
+3. `context/strategy.md`
+4. `context/icp.md`
+5. `context/voice-analysis.md`
+6. 5 bài gần nhất trong `posts/` nếu có
 
-### Theo Phương Pháp (ý tưởng đến từ đâu)
+## Tệp Khách Hàng Cần Luân Phiên
 
-| Phương pháp       | Số lượng | Mô tả                                                                          |
-| ----------------- | -------- | ------------------------------------------------------------------------------ |
-| Viral Replication | 5        | Tìm nội dung đã chứng minh hiệu quả, lấy cấu trúc đóng gói, đổi phần substance |
-| Trend Surfing     | 3        | Bám các xu hướng đang nổi lên ngay bây giờ trong niche                         |
-| Pain Points       | 2        | Đào sâu nỗi đau thật của khán giả và đưa giải pháp hành động được              |
+Khi tạo batch, không viết cả 10 bài cho cùng một nhóm. Ưu tiên phủ ít nhất 5 trong 8 tệp:
 
-### Theo Định Dạng (nội dung được đưa ra như thế nào)
+1. Gia đình trẻ xây căn nhà đầu tiên.
+2. Người đang tìm thiết kế và thi công trọn gói.
+3. Chủ biệt thự/nhà phố cao cấp.
+4. Chủ nhà cải tạo nhà cũ.
+5. Nhà đầu tư bất động sản/cho thuê/homestay.
+6. Khách smarthome/nhà xanh.
+7. Gia đình nhiều thế hệ.
+8. Người nâng cấp phong cách sống.
 
-Mỗi nội dung **bắt buộc phải có visual**. Không có bài text-only.
+## Cơ Cấu Batch
 
-| Định dạng             | Số lượng | Mô tả                                                            |
-| --------------------- | -------- | ---------------------------------------------------------------- |
-| Text + Ảnh cá nhân    | 4        | Nội dung chữ + ảnh lấy từ `context/images/` phù hợp với vibe bài |
-| Text + AI Infographic | 4        | Nội dung chữ + infographic tạo bằng Kie.ai có `reference_image`  |
-| Carousel (PDF)        | 2        | Carousel 7-11 slide tạo bởi `scripts/generate-carousel.py`       |
+### Theo Trụ Cột
 
-### Ma Trận Phân Bổ
+| Trụ cột | Số lượng | Mục tiêu |
+| --- | ---: | --- |
+| Kinh nghiệm xây nhà | 4 | Giáo dục thị trường, tăng lưu bài |
+| Cảnh báo rủi ro | 2-3 | Chạm nỗi đau, tạo tranh luận |
+| Case study/công trình thực tế | 1-2 | Chứng minh năng lực, chỉ dùng khi có dữ kiện thật |
+| Quy trình/thương hiệu AKV | 1 | Xây niềm tin, chuyển đổi inbox |
+| Bán hàng mềm | 1 | Mời tư vấn nhẹ, không quảng cáo lố |
 
-Phân phối phương pháp qua các định dạng để đảm bảo đa dạng. Không để hai bài trùng cả **phương pháp** lẫn **định dạng**. Ví dụ:
+Nếu không có case thật, thay phần case bằng “bài học/thực tế công trình thường gặp” và ghi rõ không nêu tên/chi phí/địa điểm.
 
-| #   | Phương pháp       | Định dạng             | Ghi chú            |
-| --- | ----------------- | --------------------- | ------------------ |
-| 1   | Viral Replication | Text + Ảnh cá nhân    |                    |
-| 2   | Viral Replication | Text + AI Infographic |                    |
-| 3   | Viral Replication | Carousel              |                    |
-| 4   | Viral Replication | Text + AI Infographic | Khác chủ đề bài #2 |
-| 5   | Viral Replication | Text + Ảnh cá nhân    | Khác chủ đề bài #1 |
-| 6   | Trend Surfing     | Text + AI Infographic |                    |
-| 7   | Trend Surfing     | Text + Ảnh cá nhân    |                    |
-| 8   | Trend Surfing     | Carousel              |                    |
-| 9   | Pain Point        | Text + AI Infographic |                    |
-| 10  | Pain Point        | Text + Ảnh cá nhân    |                    |
+### Theo Định Dạng
 
-**Thứ tự định dạng phải được xáo trộn** để hai bài liên tiếp không trùng format.
+Phân bổ linh hoạt, tránh 3 bài liền cùng format:
 
----
+- Bài tư vấn Facebook/Zalo.
+- Checklist lưu bài.
+- Script video 45-60 giây.
+- Bài tranh luận nhẹ.
+- Bài bán hàng mềm.
+- Carousel/checklist.
+- Infographic idea.
 
-## QUY TẮC QUAN TRỌNG
+## Giai Đoạn 1: Lên Ý Tưởng
 
-### Đa Dạng (không được thỏa hiệp)
+1. Lấy chủ đề từ 5 trụ cột AKV.
+2. Tránh lặp chủ đề hẹp với các bài gần nhất.
+3. Với mỗi ý tưởng, ghi:
+   - Tiêu đề làm việc.
+   - Trụ cột AKV.
+   - Đối tượng chủ nhà.
+   - Tệp khách hàng cụ thể.
+   - Nỗi đau.
+   - Format.
+   - Hook dự kiến.
+   - CTA mềm.
+4. Lưu plan vào `outputs/YYYY-MM-DD-akv-batch-content-plan.md`.
 
-10 nội dung phải đa dạng trên mọi chiều:
+## Giai Đoạn 2: Viết Text
 
-1. **Đa dạng chủ đề** — Không có 2 bài nói cùng một chủ đề hẹp. Phải phủ ít nhất 5 chủ đề con khác nhau.
-2. **Đa dạng hook** — Luân phiên các kiểu hook:
-   - Dạng số liệu: "7 công cụ...", "mình đã dành 200 giờ..."
-   - Dạng trái chiều: "Đừng làm X nữa. Đây là lý do."
-   - Dạng kể chuyện: "6 tháng trước mình..."
-   - Dạng câu hỏi: "Tại sao 90% founder thất bại ở...?"
-   - Dạng thú nhận: "Mình đã sai về..."
-   - Dạng tuyên bố mạnh: "Chỉ một thay đổi này giúp..."
-   - Không để 2 bài liên tiếp cùng kiểu hook
-3. **Đa dạng visual** — Feed phải thú vị khi lướt:
-   - Ảnh cá nhân phải dùng các bối cảnh khác nhau
-   - Infographic phải xoay reference khác nhau (`ref-1`, `ref-2`, `ref-3`)
-   - Carousel nên khác số slide và kiểu minh họa
-   - Không để 3 bài liền cùng một định dạng
-4. **Đa dạng cảm xúc/tông**:
-   - Có bài thiên về dạy kiến thức
-   - Có bài dễ tổn thương/chia sẻ thất bại
-   - Có bài bold/provocative
-   - Có bài thực hành từng bước
+Với từng bài:
 
-### Tự Đứng Được Một Mình
-
-Mỗi nội dung phải hoàn chỉnh và có thể xuất bản ngay:
-
-- KHÔNG dùng CTA kiểu "Comment X mình gửi..."
-- KHÔNG dùng "Link ở comment"
-- KHÔNG dùng "DM mình để nhận..."
-- CTA chấp nhận được: "Follow để xem thêm", "Lưu lại", "Chia sẻ cho team", "Quan điểm của bạn là gì?"
-- Giá trị phải nằm ngay trong nội dung, không bị khóa sau một hành động
-
-### Tiêu Chuẩn Chất Lượng
-
-- Viết theo tinh thần Adam Robinson nhưng phải Việt hóa theo context hiện tại
-- Mọi bài đều cần hook mạnh, vì 2 dòng đầu quyết định phần lớn hiệu quả
-- Mỗi bài phải có giá trị thật, không viết cho có
-- Dùng context thật: tên thương hiệu, số liệu thật, trải nghiệm thật
-- Ưu tiên số cụ thể hơn phát biểu mơ hồ
-
----
-
-## Các Bước Thực Hiện
-
-### Giai Đoạn 1: Lên Ý Tưởng
-
-1. Đọc lại các file context:
-   - `context/profile.md`
-   - `context/business.md`
-   - `context/strategy.md`
-   - `context/metrics.md`
-   - `reference/adam-robinson-writing-style.md`
-2. Kiểm tra 5 post gần nhất trong `posts/` để tránh lặp chủ đề
-3. Tạo 5 ý tưởng Viral Replication
-4. Tạo 3 ý tưởng Trend Surfing
-5. Tạo 2 ý tưởng Pain Point
-6. Gán format cho cả 10 ý tưởng
-7. Lưu plan ý tưởng vào `outputs/YYYY-MM-DD-batch-content-plan.md`
-8. Chuyển ngay sang bước tạo nội dung TEXT, không chờ user duyệt plan
-
-### Giai Đoạn 2: Tạo Nội Dung Text (CHƯA tạo ảnh)
-
-Với từng nội dung:
-
-1. Xác định số post tiếp theo bằng cách kiểm tra thư mục `posts/`
-2. Tạo thư mục mới theo chuẩn `posts/NNN-slug/`
-
-**Nếu là Text + Ảnh cá nhân:**
-
-1. Viết toàn bộ nội dung
-2. Copy ảnh đã chọn từ `context/images/` thành `image.png`
-3. Lưu `post.md`
-4. Nếu là viral replication thì lưu thêm `original.md`
-
-**Nếu là Text + AI Infographic:**
-
-1. Viết toàn bộ nội dung
-2. Lưu `post.md` và `original.md` nếu có
-3. **CHƯA TẠO ẢNH** — chờ user duyệt nội dung ở Giai Đoạn 2.5
-
-**Nếu là Carousel:**
-
-1. Viết nội dung từng slide
-2. Tạo file JSON bằng UTF-8 và giữ nguyên tiếng Việt có dấu
-3. Viết caption/post đi kèm
-4. Lưu `post.md` và `content.json`
-5. **CHƯA TẠO PDF** — chờ user duyệt nội dung ở Giai Đoạn 2.5
-
-### Giai Đoạn 2.5: Duyệt Nội Dung Trước Khi Tạo Visual (BẮT BUỘC)
-
-**Bước này KHÔNG được bỏ qua.**
-
-Trước khi generate bất kỳ ảnh nào (Kie.ai infographic hoặc carousel PDF), PHẢI:
-
-1. Trình bày cho user danh sách tất cả nội dung đã viết, gồm:
-   - Tiêu đề, phương pháp, định dạng
-   - Nội dung text đầy đủ (hoặc tóm tắt hook + ý chính)
-   - Với infographic: mô tả nội dung sẽ hiển thị trên ảnh
-   - Với carousel: tóm tắt nội dung từng slide
-2. Chờ user duyệt và chỉnh sửa nếu cần
-3. Chỉ sau khi user xác nhận, mới chuyển sang Giai Đoạn 3
-
-**Lý do:** Tạo ảnh tốn API call và thời gian. Nếu nội dung không dùng được thì lãng phí.
-
-### Giai Đoạn 3: Tạo Visual (sau khi user duyệt)
-
-**Nếu là Text + AI Infographic:**
-
-1. Tạo infographic bằng Kie.ai với `reference_image`
-2. Mọi text hiển thị trong ảnh phải giữ nguyên tiếng Việt có dấu — prompt PHẢI chứa đúng tiếng Việt có dấu, KHÔNG gửi prompt không dấu
-3. Luân phiên `reference/infographic-ref-1.jpeg`, `ref-2`, `ref-3`
-4. Lưu `image.png`
-5. Kiểm tra text trên ảnh — nếu sai dấu tiếng Việt, regenerate hoặc dùng Pillow để sửa
-
-**Nếu là Carousel:**
-
-1. Chạy `python scripts/generate-carousel.py --json <file> --output posts/NNN-slug/carousel.pdf`
-
-### Giai Đoạn 3: Hoàn Thiện
-
-1. Chạy `python3 scripts/build-dashboard.py`
-2. Kiểm tra mọi nội dung đều có visual:
-   - `image.png`, hoặc
-   - `carousel.pdf` + `carousel-slides/`
-3. Kiểm tra chất lượng:
-   - Không trùng chủ đề
-   - Hook đa dạng
-   - `post.md` có phần `## Post Text (copy-paste ready)`
-   - Trường format khớp với visual thật
-4. Báo cáo lại:
-   - Liệt kê 10 nội dung đã tạo với số, tiêu đề, phương pháp, định dạng
-   - Mở dashboard bằng `open outputs/dashboard.html`
-
----
-
-## Chuẩn Lưu Trữ Post
-
-Mỗi post nằm trong `posts/NNN-slug/`:
-
-```text
-post.md
-image.png
-carousel.pdf
-original.md
-original-image.jpg
-```
-
-### Mẫu `post.md`
+1. Xác định số post tiếp theo trong `posts/`.
+2. Tạo thư mục `posts/NNN-slug/`.
+3. Viết `post.md` theo chuẩn:
 
 ```markdown
-# [Tiêu đề bài]
+# Bài NNN: Tiêu Đề
 
-**Date created:** YYYY-MM-DD
-**Method:** [Viral Replication / Trend Surfing / Pain Point]
-**Format:** [Text + Personal Photo / Text + AI Infographic / Carousel]
-**Platform:** [Điền nền tảng phù hợp]
-**Status:** Ready to publish
+**Ngày tạo:** YYYY-MM-DD
+**Nền tảng:** Facebook / TikTok-Reels / Zalo / Website / Email-Inbox
+**Định dạng:** Bài post / Caption ngắn / Script video / Checklist / Carousel / Bài bán hàng mềm
+**Trụ cột AKV:** Kinh nghiệm xây nhà / Cảnh báo rủi ro / Tư duy thiết kế / Quy trình AKV / Case study
+**Tệp khách hàng:** [Một trong 8 tệp AKV]
+**Mục tiêu:** Tạo niềm tin / Tăng inbox / Tăng lưu bài / Giáo dục thị trường / Tạo tranh luận
+**Visual:** Ảnh công trình / AI Infographic / Carousel / Không dùng
+**Trạng thái:** Draft
 
-## Post Text (copy-paste ready)
+---
 
-[Nội dung chính]
+## Post Text
+
+[Nội dung copy-paste ready]
+
+---
+
+## Voice Check
+
+- Hook:
+- Tệp khách hàng:
+- Nỗi đau:
+- Lời khuyên cụ thể:
+- CTA mềm:
+- Đã tránh:
+
+---
 
 ## Image Notes
 
-[Ghi chú về ảnh/carousel]
-
-## Original Post (if applicable)
-
-[Link bài gốc, tác giả, engagement]
+[Mô tả visual hoặc prompt]
 ```
 
----
+## Giai Đoạn 2.5: Duyệt Trước Visual
 
-## Ghi Chú Về Song Song Hóa
+Không generate visual tốn API trước khi text đã đủ chắc hoặc user đã xác nhận.
 
-- Phần ideation cho 3 phương pháp có thể chạy song song
-- Các lệnh tạo hình Kie.ai có thể submit song song rồi poll song song
-- Carousel PDF được tạo local nên khá nhanh
-- Copy ảnh gần như tức thời
-- Viết text thường nên làm tuần tự để giữ chất lượng
+Báo user danh sách 10 bài gồm:
+
+- Tiêu đề.
+- Trụ cột.
+- Tệp khách hàng.
+- Format.
+- Hook.
+- CTA.
+- Visual đề xuất.
+
+## Giai Đoạn 3: Tạo Visual Nếu Được Duyệt
+
+### Infographic
+
+```powershell
+python scripts/generate-infographic.py --reference reference/infographic-ref-1.jpeg --output posts/NNN-slug/image.png --prompt "<prompt tiếng Việt có dấu>"
+```
+
+### Carousel
+
+```powershell
+python scripts/generate-carousel.py --json posts/NNN-slug/content.json --output posts/NNN-slug/carousel.pdf
+```
+
+## Giai Đoạn 4: Hoàn Thiện
+
+1. Chạy `python scripts/build-dashboard.py`.
+2. Kiểm tra `Voice Check` từng bài.
+3. Kiểm tra không có dữ kiện bị bịa.
+4. Báo cáo danh sách 10 bài, file đã tạo, visual còn chờ duyệt nếu có.
+
+## Quality Bar
+
+- Hook phải thẳng, không chung chung.
+- Nội dung phải có ích, không chỉ nêu vấn đề.
+- Mỗi bài nên có một câu chốt nhớ lâu.
+- CTA phải tự nhiên.
+- Không viết như bảng báo giá.
+- Không hứa điều An Khang Việt chưa cung cấp dữ kiện.

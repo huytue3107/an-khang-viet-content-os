@@ -1,106 +1,118 @@
-# Carousel Creation Skill
+---
+name: carousel-creation
+description: Create An Khang Việt carousel/checklist content for house building, renovation, design, quotations, contracts, contractor selection, and construction risk education. Use when the user asks for carousel, slides, swipe post, checklist PDF, or multi-slide content.
+---
 
-## Purpose
+# Carousel Creation — An Khang Việt
 
-Create LinkedIn carousel posts (PDF format) with a clean, professional style.
+Create carousels that homeowners can save and re-read before building, renovating, signing a contract, or comparing quotes.
 
-## When to Use
+## Required Context
 
-- User asks to create a carousel, slide deck, or multi-slide post
-- User says "carousel", "slides", "swipe post", "PDF post"
+Read:
 
-## Visual Style (NON-NEGOTIABLE)
+1. `AKV-content.md`
+2. `context/voice-analysis.md`
+3. `context/strategy.md`
 
-### Brand Adaptation
+## Best Carousel Topics
 
-> **Customize these colors in `scripts/generate-carousel.py`**
+- 5-9 điều cần kiểm tra trước khi ký hợp đồng.
+- Cách đọc một báo giá xây nhà.
+- Dấu hiệu báo giá mập mờ.
+- Những lỗi xây nhà lần đầu.
+- Nhà đẹp chưa chắc đã đáng sống.
+- Câu hỏi phải hỏi nhà thầu.
+- Các bước làm rõ nhu cầu trước khi thiết kế.
+- Checklist cải tạo nhà cũ trước khi đập sửa.
+- Smarthome vừa đủ: những điểm nên tính từ lúc thiết kế.
+- Nhà nhiều thế hệ: an toàn, chung riêng, thói quen sống.
+- Nội thất cho thuê: đẹp phải đi cùng độ bền và hoàn vốn.
 
-- **Background:** Cream (#F5F3EE)
-- **Text:** Black (#1A1A1A)
-- **Accent:** [YOUR ACCENT COLOR — default: Lime green #C8E64A]
-- **Branding:** Dark banner (#1A1A1A) with "[YOUR BRAND]" on cover and CTA slides
-- **Typography:** Serif headings (bold), regular subtitles, italic quotes
+## Segment Fit
 
-### Slide Structure
+Before writing slides, pick one customer segment:
 
-**Cover Slide:**
+- First-time young family: simplify, guide, focus on budget and avoiding mistakes.
+- Design-build shopper: compare responsibility, quote clarity, contract, supervision.
+- High-end homeowner: speak about hidden quality, execution detail, privacy, long-term value.
+- Renovation owner: diagnose old-house problems before making it pretty.
+- Property investor: connect design decisions to operation, maintenance, and cash flow.
+- Smarthome/green-home customer: technology after real habits, energy savings from design first.
+- Multi-generation family: safety, harmony, shared/private space.
+- Lifestyle upgrader: personal taste with function and restraint.
 
-- Large serif title, centered
-- Decorative overlapping circles in accent color (translucent)
-- Key phrase in italic for emphasis
-- Bottom banner with branding
+## Slide Structure
 
-**Content Slides (one per point):**
+Recommended 7-11 slides:
 
-- Top: Numbered heading in bold serif + 1-line subtitle
-- Center: Simple geometric illustration (circles, dots, lines)
-  - Use accent color as highlight
-  - Each slide MUST have a different illustration
-- Bottom: Italic serif takeaway/insight quote
-- Generous whitespace throughout
+1. Cover: hook mạnh, saveable.
+2. Context slide: vì sao chủ nhà dễ sai.
+3. Point slides: one check/lesson per slide.
+4. Warning slide: lỗi hay gặp hoặc hậu quả.
+5. CTA slide: lưu bài/inbox tư vấn bước đầu.
 
-**CTA Slide (last):**
+Each content slide should include:
 
-- "Follow for more" or relevant CTA
-- Author name
-- Brand banner
+- Heading: ngắn, rõ.
+- Subtitle: giải thích bằng ngôn ngữ đời thường.
+- Takeaway: câu chốt đáng nhớ.
 
-### Dimensions
+## JSON Schema
 
-- **1080 x 1350px** (4:5 ratio — LinkedIn carousel standard)
-
-## How to Generate
-
-Use the Python script at `scripts/generate-carousel.py`:
-
-```bash
-python3 scripts/generate-carousel.py --json content.json --output posts/NNN-slug/carousel.pdf
-```
-
-### Content Structure (JSON)
+Use UTF-8 and keep Vietnamese diacritics:
 
 ```json
 {
-  "title": "The 7 AI Tools That 10x'd My Productivity",
-  "title_emphasis": "AI Tools",
+  "title": "7 điều cần kiểm tra trước khi ký hợp đồng xây nhà",
+  "title_emphasis": "7 điều",
   "slides": [
     {
       "number": 1,
-      "heading": "Tool Name",
-      "subtitle": "One-line description of what it does.",
-      "takeaway": "Key insight or quote for this slide."
+      "heading": "Phạm vi công việc",
+      "subtitle": "Hợp đồng phải ghi rõ bên thi công làm những hạng mục nào và không làm hạng mục nào.",
+      "takeaway": "Cái gì không ghi rõ hôm nay, rất dễ thành phát sinh ngày mai."
     }
   ],
-  "cta_text": "Follow [YOUR NAME] for more insights.",
-  "cta_subtitle": "Repost to help your network."
+  "cta_text": "Lưu lại trước khi làm việc với nhà thầu.",
+  "cta_subtitle": "Nếu đang có báo giá hoặc bản vẽ còn lăn tăn, inbox An Khang Việt để được gợi ý điểm cần kiểm tra."
 }
 ```
 
-## Workflow
+## Generate
 
-1. **Decide topic** — use content ideation or viral replication
-2. **Write slide content** — title, numbered points with headings + subtitles + takeaways
-3. **Generate PDF** — run the script with the content JSON
-4. **Write post text** — mirror the carousel content in the post caption
-5. **Save** — store in `posts/NNN-slug/` with carousel.pdf, post.md, original.md
-6. **Rebuild dashboard** — `python3 scripts/build-dashboard.py`
-
-## Post Storage
-
-```
-posts/NNN-slug/
-  post.md           # Metadata + copy-paste ready text
-  carousel.pdf      # The carousel PDF for LinkedIn upload
-  carousel-slides/  # Auto-generated slide PNGs for preview
-  content.json      # Content JSON (for regeneration)
-  original.md       # Original viral post (if replicated)
+```powershell
+python scripts/generate-carousel.py --json posts/NNN-slug/content.json --output posts/NNN-slug/carousel.pdf
 ```
 
-## Tips for High-Performing Carousels
+The script also saves slide PNGs for dashboard preview.
 
-- **7-11 slides** is the sweet spot (cover + 5-9 content + CTA)
-- **Cover must hook** — use numbers, power words, curiosity gaps
-- **One idea per slide** — don't overcrowd
-- **Bottom italic quote** should be the ONE thing people remember from that slide
-- **Variety in illustrations** — never two slides with the same graphic
-- **Post text should preview** the carousel content (not duplicate it word-for-word)
+## Post Caption
+
+Caption should not duplicate every slide word-for-word. It should:
+
+- Open with the same pain.
+- Preview 3-5 key checks.
+- Add one practical warning.
+- End with soft CTA.
+
+## Visual Style
+
+Default AKV style:
+
+- Light neutral background.
+- Dark green and earth-gold accents.
+- Clean typography, high contrast.
+- Minimal construction-inspired geometry: grids, dots, ruler lines, blueprint cues.
+- No neon, no luxury cliché, no overdecorated real estate look.
+
+## Quality Checklist
+
+- Cover slide is clear enough to save.
+- Each slide teaches one thing only.
+- No fake data.
+- Segment is explicit and the slide examples fit that segment.
+- No hard sales language.
+- CTA is soft and useful.
+- Text is legible and fits.
+- Vietnamese diacritics render correctly.

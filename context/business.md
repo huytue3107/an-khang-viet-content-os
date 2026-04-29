@@ -1,79 +1,62 @@
-# Kinh Doanh
+# Kinh Doanh — An Khang Việt
 
-_Cập nhật lần cuối: [DATE] — Điền ngày bạn setup_
-
-> **Hướng dẫn:** Điền thông tin kinh doanh của bạn. File này giúp Claude hiểu bạn đang bán gì, cho ai, và content phục vụ mục tiêu kinh doanh nào.
-
----
+_Cập nhật lần cuối: 2026-04-29_
+_Nguồn chính: `AKV-content.md`_
 
 ## Cấu Trúc Thương Hiệu
 
-### Lớp 1: [BRAND_NAME] (Thương hiệu nội dung công khai)
+### An Khang Việt Content
 
-**Website:** [WEBSITE_URL]
-**Mục đích:** [Mô tả vai trò của brand này — xây audience, tạo trust, inbound, v.v.]
-**Quy mô hiện tại:** [Tổng followers/subscribers các kênh]
+**Mục đích:** Xây dựng niềm tin và nhu cầu tư vấn cho nhóm khách đang quan tâm xây nhà, sửa nhà, thiết kế nhà và chọn nhà thầu.
+**Vai trò:** Giáo dục thị trường, cảnh báo rủi ro, giúp chủ nhà hiểu quy trình và ra quyết định tỉnh táo hơn.
+**Giọng thương hiệu:** Chuyên gia xây nhà nói thật, nói thẳng, dễ hiểu, có nghề, có tâm, hơi dí dỏm, hơi trào phúng.
 
-**Sản phẩm & Dịch Vụ:**
+### An Khang Việt
 
-| Sản phẩm      | Mô tả                | Đối tượng            |
-| ------------- | -------------------- | -------------------- |
-| [Sản phẩm 1]  | [Mô tả ngắn]         | [Đối tượng mục tiêu] |
-| [Sản phẩm 2]  | [Mô tả ngắn]         | [Đối tượng mục tiêu] |
-| [Sản phẩm 3]  | [Mô tả ngắn]         | [Đối tượng mục tiêu] |
-
-### Lớp 2: [COMPANY_NAME] (Thương hiệu công ty B2B — nếu có)
-
-**Website:** [COMPANY_URL]
-**Email:** [EMAIL]
-**Điện thoại:** [PHONE]
-**Địa chỉ:** [ADDRESS]
-**Tầm nhìn:** "[Tầm nhìn dài hạn của công ty]"
-**Tập trung:** [Công ty giải quyết bài toán gì cho khách hàng B2B]
-
-**Sản phẩm & Dịch Vụ:**
-
-| Sản phẩm/Dịch vụ | Mô tả        | Đối tượng            |
-| ---------------- | ------------ | -------------------- |
-| [Tên]            | [Mô tả ngắn] | [Đối tượng mục tiêu] |
-| [Tên]            | [Mô tả ngắn] | [Đối tượng mục tiêu] |
-
----
+**Nhóm dịch vụ trọng tâm:** Thiết kế, tư vấn và xây nhà trọn gói.
+**Thông tin chi tiết về giá, vật tư, chính sách, bảo hành:** Chỉ dùng khi user cung cấp dữ kiện thật trong brief hoặc file context bổ sung. Không tự suy diễn.
 
 ## Khách Hàng Mục Tiêu
 
-**[BRAND_NAME] (B2C/prosumer):**
-- [Nhóm đối tượng 1 — ví dụ: Người đi làm muốn tăng năng suất bằng AI]
-- [Nhóm đối tượng 2 — ví dụ: Freelancer muốn tự động hóa workflow]
-- [Nhóm đối tượng 3 — ví dụ: Founder SME muốn ứng dụng AI vào vận hành]
+| Nhóm | Mô tả | Nội dung phù hợp |
+| --- | --- | --- |
+| Gia đình trẻ xây nhà đầu tiên | Có đất/ngân sách, xem nhiều mẫu đẹp nhưng sợ rối và phát sinh | Checklist, phân bổ ngân sách, lỗi lần đầu, nhà nhỏ tiện |
+| Người đang tìm nhà thầu trọn gói | Đang so sánh báo giá, sợ bán thầu và mập mờ trách nhiệm | Hợp đồng, vật tư, quy trình, giám sát, bảo hành |
+| Khách biệt thự/nhà phố cao cấp | Cần chỉn chu, riêng tư, đúng bản vẽ, đáng tiền | Phần ẩn, tay nghề, vật liệu, giám sát nhiều lớp |
+| Chủ nhà cải tạo nhà cũ | Muốn nhà sáng/thoáng/tiện hơn, sợ sửa thành phát sinh lớn | Khảo sát, bắt bệnh, chống thấm, điện nước, chia giai đoạn |
+| Nhà đầu tư bất động sản | Cần hiệu suất khai thác và độ bền vận hành | Hoàn vốn, vật liệu bền, concept cho thuê, bảo trì |
+| Khách smarthome/nhà xanh | Muốn tiện nghi và tiết kiệm năng lượng có kiểm soát | Smarthome vừa đủ, hướng nắng gió, vận hành khi lỗi/mất mạng |
+| Gia đình nhiều thế hệ | Cần hài hòa, an toàn, lâu dài | Công năng theo tuổi, không gian chung/riêng, an toàn |
+| Người nâng cấp phong cách sống | Muốn nhà có gu, cá nhân hóa nhưng vẫn dễ sống | Phong cách, ánh sáng, chất liệu, lưu trữ, tiết chế |
 
-**[COMPANY_NAME] (B2B — nếu có):**
-- [Nhóm doanh nghiệp 1]
-- [Nhóm doanh nghiệp 2]
+## Nỗi Đau Chính
 
----
+- “Tôi không biết bắt đầu xây nhà từ đâu.”
+- “Báo giá bên nào cũng khác, không biết rẻ hay mập mờ.”
+- “Sợ ký xong mới phát sinh đủ thứ.”
+- “Sợ thiết kế đẹp nhưng vào ở bất tiện.”
+- “Sợ nhà thầu nói hay nhưng thi công không đến nơi.”
+- “Sợ vật tư bị tráo hoặc hợp đồng ghi không rõ.”
 
-## Nỗi Đau Chính Cần Giải Quyết
+## Chuyển Đổi Mong Muốn
 
-- [Pain point 1 của audience mục tiêu]
-- [Pain point 2 của audience mục tiêu]
-- [Pain point 3 của audience mục tiêu]
+Content không ép bán. Mục tiêu là làm người đọc muốn:
 
----
-
-## Mô Hình Doanh Thu
-
-- [Nguồn thu 1 — ví dụ: Khóa học online]
-- [Nguồn thu 2 — ví dụ: Cộng đồng trả phí]
-- [Nguồn thu 3 — ví dụ: Tư vấn / dịch vụ triển khai]
-- [Nguồn thu 4 — ví dụ: SaaS / phần mềm]
-
----
+- Lưu bài để dùng khi chuẩn bị xây nhà.
+- Gửi cho vợ/chồng/bố mẹ cùng xem.
+- Inbox hỏi trường hợp nhà mình.
+- Gửi bản vẽ hoặc báo giá để được gợi ý điểm cần kiểm tra.
+- Tin rằng An Khang Việt là đơn vị làm nghề rõ ràng, tử tế.
 
 ## Logic Hệ Sinh Thái
 
-```
-[BRAND_NAME] (Content) → Xây audience & trust → Chuyển đổi sang [COMPANY_NAME] (Services/Products)
+```text
+Nội dung rõ ràng -> Chủ nhà hiểu vấn đề -> Tin cách làm của An Khang Việt -> Inbox tư vấn -> Làm rõ nhu cầu -> Chuyển đổi sang dịch vụ phù hợp
 ```
 
-[Mô tả ngắn cách content phục vụ mục tiêu kinh doanh của bạn — 1-2 câu]
+## Quy Tắc Về Dữ Kiện Kinh Doanh
+
+- Nếu brief không cung cấp giá, không viết giá.
+- Nếu brief không cung cấp chính sách bảo hành, không viết chính sách bảo hành cụ thể.
+- Nếu brief không cung cấp case thật, không dựng tên khách/địa điểm/số tiền.
+- Nếu cần nói về quy trình An Khang Việt, chỉ nói ở mức nguyên tắc: tư vấn rõ, thiết kế rõ, báo giá rõ, thi công/giám sát/nghiệm thu rõ.

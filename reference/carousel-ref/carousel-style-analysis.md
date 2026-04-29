@@ -48,4 +48,4 @@
 
 - `slide-00.jpg`: style sạch, editorial, nền sáng, text block thoáng
 - `slide-01.jpg`: style tối giản, thiên về business/social carousel
-- `slide-02.jpg`: style carousel LinkedIn template, có tính hướng dẫn và chia bước rõ ràng
+- `slide-02.jpg`: style carousel social template, có tính hướng dẫn và chia bước rõ ràng

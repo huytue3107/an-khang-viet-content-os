@@ -1,152 +1,241 @@
 ---
 name: content-ideation
-description: Generate content ideas for LinkedIn posts using three methods - viral replication (stealing proven formats), trend surfing (what's hot right now), and audience pain points (solving real problems). Use when asked to "generate content ideas", "come up with post ideas", "brainstorm content", "find topics to post about", "give me ideas", or any request for content ideation. The user can request any number of ideas (e.g., "give me 15 ideas") and they will be split evenly across the three methods.
+description: Generate content ideas for An Khang Việt Content using the AKV master style guide, five content pillars, owner pain points, and soft conversion goals. Use when asked to brainstorm topics, create content ideas, plan a series, or find post angles for house building, renovation, contractor selection, design, quotation, contracts, or construction risks.
 ---
 
-# Content Ideation
+# Content Ideation — An Khang Việt
 
-Generate content ideas using three complementary methods. When asked for N ideas, split evenly: N/3 viral replication ideas, N/3 trend ideas, N/3 pain point ideas. Round up where needed.
+Generate ideas that fit `AKV-content.md` and the voice **Chuyên Gia Xây Nhà**.
 
-## Method 1: Viral Replication Ideas
+## Required Context
 
-Find proven viral posts from other creators and propose replicating their packaging.
+Read before ideating:
 
-**Process:**
+1. `AKV-content.md`
+2. `context/icp.md`
+3. `context/strategy.md`
+4. `context/voice-analysis.md`
+5. Recent files in `posts/` if any
 
-1. Check `context/data/linkedin/trending-posts-research.json` for scraped viral posts
-2. If data is stale (>7 days old), use Apify to scrape fresh trending posts:
-   - Actor: `apimaestro~linkedin-posts-search-scraper-no-cookies`
-   - Search queries relevant to your niche
-   - Sort by engagement score (reactions + comments*3 + shares*2)
-3. Filter for replicable posts:
-   - Has high engagement (500+ score)
-   - Is NOT a deep personal story (we can't replicate those)
-   - Is a framework, tool list, skill share, how-to, or listicle
-   - Has an image or infographic (not video)
-4. For each idea, document: original author, engagement, hook, why it's replicable, how to adapt
+## Core Rule
 
-**Output format per idea:**
+An idea is only useful if it can become content a chủ nhà would save, send to family, comment on, or inbox about. Avoid generic topic labels like “thiết kế nhà đẹp”; turn them into concrete tensions, mistakes, checklists, or decisions.
 
-```
-### [Idea title adapted to your niche]
-- **Method:** Viral Replication
-- **Original:** [Author name] ([engagement] engagement)
-- **Original hook:** "[First 2 lines]"
-- **Our hook:** "[Adapted first 2 lines]"
-- **Format:** [Personal photo + text / AI infographic + text / Carousel]
-- **Image type:** [Infographic / Personal photo / None]
-- **Why it works:** [1-2 sentences]
-- **Replication difficulty:** [Easy / Medium]
-```
+## Customer Segment Rule
 
-## Method 2: Trend Surfing Ideas
+Every idea must name one of the 8 AKV customer segments:
 
-Find what's trending RIGHT NOW and create timely content around it.
+1. Gia đình trẻ Gen Y/Gen Z xây căn nhà đầu tiên.
+2. Người đang tìm thiết kế và thi công trọn gói.
+3. Chủ biệt thự/nhà phố cao cấp.
+4. Chủ nhà cải tạo nhà cũ.
+5. Nhà đầu tư bất động sản/cho thuê/homestay.
+6. Khách smarthome/nhà xanh.
+7. Gia đình nhiều thế hệ.
+8. Người nâng cấp phong cách sống.
 
-**Process:**
+If the user does not specify a segment, infer it from topic and goal. Record the assumption in the idea output.
 
-1. Use WebSearch to check current trends in your niche
-2. Check Google Trends for rising topics
-3. Check recent YouTube outliers (videos with disproportionate views vs channel size = massive signal)
-4. Filter for:
-   - Happened in the last 7 days (maximum freshness)
-   - Relevant to your niche
-   - Has a clear angle or take you can add
+## Idea Sources
 
-**Output format per idea:**
+### 1. Kinh Nghiệm Xây Nhà
 
-```
-### [Timely topic + your angle]
-- **Method:** Trend Surfing
-- **Trend source:** [News / Google Trends / YouTube outlier / Platform update]
-- **Why it's timely:** [What happened and when]
-- **Our hook:** "[Proposed first 2 lines]"
-- **Format:** [Personal photo + text / AI infographic + text / Carousel]
-- **Image type:** [Infographic / Personal photo / None]
-- **Why it works:** [1-2 sentences]
-- **Expiry:** [How many days until this is no longer timely]
+Use when the goal is education and saves.
+
+Angles:
+
+- What to prepare before building.
+- How to read a quotation.
+- What to ask before signing.
+- Costs and items owners often forget.
+- Mistakes first-time builders make.
+
+Output idea as:
+
+```text
+### [Title]
+- Trụ cột: Kinh nghiệm xây nhà
+- Tệp khách hàng: [one of 8 AKV segments]
+- Nỗi đau: "[their words]"
+- Hook: "[first 1-2 lines]"
+- Format: [post/checklist/script/carousel]
+- Advice payload: [what useful checklist/framework the post gives]
+- CTA: [soft CTA]
 ```
 
-## Method 3: Audience Pain Point Ideas
+### 2. Cảnh Báo Rủi Ro
 
-Think deeply about the target audience's problems and create content that addresses them.
+Use when the goal is comments, shares, and inbox from worried owners.
 
-**Process:**
+Angles:
 
-1. Read `context/business.md` and `context/strategy.md` for audience context
-2. Read `context/data/linkedin/posts.json` — look at highest-engagement posts to see what topics your audience responds to
-3. For each idea, start with the PAIN, then propose the content that solves it
-4. Frame as: "What keeps this person up at night?" → "What would they screenshot and save?"
+- Cheap but vague quotes.
+- Swapped materials.
+- Scope not written clearly.
+- Unclear variation costs.
+- No site supervision.
+- Weak warranty responsibility.
+- “Anh cứ yên tâm” without written terms.
 
-**Pain point categories to rotate through:**
+Output idea as:
 
-- **Time:** "I don't have time to..." → show them efficient systems
-- **Voice:** "My content doesn't sound like me" → show them techniques
-- **Strategy:** "I don't know what to..." → give them frameworks
-- **ROI:** "Is this even worth it?" → show them the business case
-- **Tools:** "There are too many tools, which ones matter?" → curate for them
-- **Consistency:** "I start then stop after 2 weeks" → give them sustainable systems
-
-**Output format per idea:**
-
-```
-### [Content title addressing the pain]
-- **Method:** Pain Point
-- **Pain:** [The specific audience pain in their words]
-- **Our hook:** "[Proposed first 2 lines]"
-- **Format:** [Personal photo + text / AI infographic + text / Carousel]
-- **Image type:** [Infographic / Personal photo / None]
-- **Why it resonates:** [Why this pain point is acute right now]
-- **CTA angle:** [What action should the reader take]
+```text
+### [Title]
+- Trụ cột: Cảnh báo rủi ro
+- Tệp khách hàng: [one of 8 AKV segments]
+- Risk: [specific risk]
+- Hook: "[direct warning]"
+- Why it matters: [practical consequence]
+- Check method: [what owner should ask/check]
+- Format: [post/script/checklist]
+- CTA: [save/inbox/check quotation]
 ```
 
-## Output Structure
+### 3. Tư Duy Thiết Kế Nhà Đáng Sống
 
-Save all ideas to `outputs/YYYY-MM-DD-content-ideas.md` with:
+Use when the goal is upgrading perception from “pretty house” to “livable house”.
+
+Angles:
+
+- Function over decor.
+- Light and ventilation.
+- Storage.
+- Kitchen workflow.
+- Hot bedrooms.
+- Smell-prone bathrooms.
+- Multi-generation homes.
+
+Output idea as:
+
+```text
+### [Title]
+- Trụ cột: Tư duy thiết kế nhà đáng sống
+- Tệp khách hàng: [one of 8 AKV segments]
+- Misbelief: [what owners often think]
+- Better frame: [what AKV wants them to understand]
+- Hook: "[contrarian/livable-house hook]"
+- Practical takeaway: [what they can check at home/design stage]
+- Format: [post/carousel/script]
+- CTA: [soft CTA]
+```
+
+### 4. Quy Trình An Khang Việt
+
+Use when the goal is trust and conversion.
+
+Only use verified process details if provided. If no detailed process exists, stay at principle level: consult clearly, design clearly, quote clearly, build and inspect clearly.
+
+Output idea as:
+
+```text
+### [Title]
+- Trụ cột: Quy trình An Khang Việt
+- Tệp khách hàng: [one of 8 AKV segments]
+- Trust point: [clarity/transparency/supervision/warranty]
+- Hook: "[process-oriented hook]"
+- What to explain: [specific process or principle]
+- Boundary: [what must not be claimed without data]
+- Format: [soft sales post/script/inbox follow-up]
+- CTA: [book consultation/inbox first review]
+```
+
+### 5. Case Study / Công Trình Thực Tế
+
+Use only when the user provides real case details. Without real case details, convert to “bài học thường gặp” and avoid names, locations, prices, or exact outcomes.
+
+Output idea as:
+
+```text
+### [Title]
+- Trụ cột: Case study/công trình thực tế
+- Tệp khách hàng: [one of 8 AKV segments]
+- Case data available: [yes/no]
+- Owner problem: [given or generic]
+- Lesson: [what readers learn]
+- Hook: "[situation hook]"
+- Format: [case post/carousel/script]
+- CTA: [ask about similar case]
+```
+
+## Batch Split
+
+For N ideas, default split:
+
+- 40% Kinh nghiệm xây nhà.
+- 25% Cảnh báo rủi ro.
+- 15% Case/bài học thực tế.
+- 10% Quy trình/thương hiệu.
+- 10% Bán hàng mềm.
+
+If no case data is available, replace case ideas with “bài học thực tế thường gặp” and mark them clearly.
+
+For a batch of 10 ideas, cover at least 5 customer segments unless the user asks for a narrow campaign.
+
+## Goal-To-Segment Defaults
+
+- **Tạo tin tưởng:** first-time builders, design-build shoppers, renovation owners.
+- **Tạo lưu bài:** first-time builders, renovation owners, multi-generation families, smarthome/green-home customers.
+- **Muốn inbox:** quote-comparing owners, first-time builders, high-end homeowners, property investors.
+- **Tạo tranh luận:** young design-minded owners, design-build shoppers, rental investors, smarthome fans.
+
+## Hook Requirements
+
+Rotate hook types:
+
+- Direct warning: “Đừng…”
+- Misbelief correction: “Nhiều chủ nhà nghĩ…, nhưng…”
+- Saveable checklist: “Trước khi…, kiểm tra…”
+- Debate: “Chủ nhà càng…, công trình càng…”
+- Livable-house insight: “Nhà đẹp mà… thì…”
+
+## Output File
+
+Save idea sets to:
+
+```text
+outputs/YYYY-MM-DD-akv-content-ideas.md
+```
+
+Use this structure:
 
 ```markdown
-# Content Ideas — [Date]
+# Ý Tưởng Nội Dung AKV — YYYY-MM-DD
 
-**Generated:** [date]
-**Total ideas:** [N]
-**Split:** [X] viral replication, [X] trend surfing, [X] pain points
+**Tổng số:** N
+**Nguồn:** AKV-content.md
 
----
-
-## Viral Replication Ideas
+## Kinh Nghiệm Xây Nhà
 
 [ideas]
 
-## Trend Surfing Ideas
+## Cảnh Báo Rủi Ro
 
 [ideas]
 
-## Audience Pain Point Ideas
+## Tư Duy Thiết Kế Nhà Đáng Sống
 
 [ideas]
 
----
+## Quy Trình An Khang Việt
 
-## Recommended Top 5
+[ideas]
 
-[Pick the 5 best ideas across all methods, ranked by predicted engagement]
+## Case/Bài Học Thực Tế
+
+[ideas]
+
+## Top Ưu Tiên
+
+[ranked top ideas and why]
 ```
 
-## Quality Filters (apply to ALL ideas)
+## Quality Filter
 
-- Must be relevant to your niche
-- Must be replicable without deep personal stories
-- Must have a clear, specific hook — not vague topics
-- Must specify format and image type
-- Prefer ideas where the hook contains specific numbers or a surprising statement
-- Avoid topics you've posted about in the last 30 days
-- No more than 2 ideas on the exact same sub-topic
+Reject ideas that:
 
-## Writing Style for Hooks
-
-All proposed hooks should follow Adam Robinson's style:
-
-- Lowercase, conversational
-- Specific numbers over vague claims
-- Curiosity gap or contrarian angle
-- See `reference/adam-robinson-writing-style.md`
+- Require fake price, fake case, fake warranty, or fake project details.
+- Are only a broad topic with no owner pain.
+- Do not name a specific customer segment.
+- Sound like a sales brochure.
+- Do not offer a check, lesson, or practical action.
+- Repeat a recent narrow topic.

@@ -1,58 +1,41 @@
-# Chỉ Số
+# Metrics — An Khang Việt Content
 
-_Cập nhật lần cuối: [DATE] — Cập nhật mỗi 1-2 tháng_
+_Cập nhật lần cuối: 2026-04-29_
 
-> **Hướng dẫn:** Điền số liệu thật của bạn vào đây. Sau khi chạy `/init-context`, section này có thể được tự động điền từ dữ liệu scrape Apify.
+File này dùng để ghi chỉ số vận hành content. Khi chưa có số liệu thực tế, AI không được bịa số.
 
----
+## Chỉ Số Cần Theo Dõi
 
-## Số Liệu Mạng Xã Hội
+| Nhóm | Chỉ số | Ý nghĩa |
+| --- | --- | --- |
+| Sản lượng | Số bài/tuần | Duy trì nhịp xuất bản đều |
+| Chất lượng | Số bài có checklist/câu hỏi kiểm tra | Đảm bảo nội dung có ích, đáng lưu |
+| Engagement | Lưu bài, chia sẻ, bình luận | Đo mức chạm đúng nỗi lo |
+| Conversion | Inbox tư vấn, gửi báo giá/bản vẽ | Đo khả năng tạo nhu cầu hỏi riêng |
+| Trust | Phản hồi tích cực, câu hỏi chuyên sâu | Đo niềm tin và authority |
 
-| Kênh         | Chỉ số         | Giá trị    | Nguồn / Ngày cập nhật |
-| ------------ | -------------- | ---------- | --------------------- |
-| **Tổng**     | Followers      | [SỐ]+      | [Nguồn]               |
-| **Tổng**     | Lượt xem/tháng | [SỐ]+      | [Nguồn]               |
-| **TikTok**   | Followers      | [SỐ]       | [Ngày scrape]         |
-| **TikTok**   | Tổng likes     | [SỐ]       | [Ngày scrape]         |
-| **TikTok**   | Tổng video     | [SỐ]       | [Ngày scrape]         |
-| **Facebook** | Followers      | [SỐ]       | [Ngày xác nhận]       |
-| **YouTube**  | Subscribers    | [SỐ]       | [Ngày xác nhận]       |
-| **YouTube**  | Tổng video     | [SỐ]       | [Ngày scrape]         |
+## KPI Khuyến Nghị Ban Đầu
 
----
+- 5-7 nội dung/tuần nếu có đủ dữ kiện và visual.
+- Ít nhất 3 bài/tuần thuộc nhóm giáo dục hoặc checklist.
+- Ít nhất 1 bài/tuần cảnh báo rủi ro.
+- Ít nhất 1 bài/tuần về quy trình hoặc thương hiệu.
+- Mỗi bài hoàn chỉnh phải có `Voice Check`.
 
-## Nhận Định Theo Kênh
+## Ghi Chép Theo Tháng
 
-**[Kênh 1]:** [Nhận xét về hiệu quả, xu hướng, điểm mạnh]
-**[Kênh 2]:** [Nhận xét về hiệu quả, xu hướng, điểm mạnh]
-**[Kênh 3]:** [Nhận xét về hiệu quả, xu hướng, điểm mạnh]
+```text
+Tháng:
+Số bài đã đăng:
+Bài có lưu/chia sẻ tốt nhất:
+Bài tạo nhiều inbox nhất:
+Chủ đề được hỏi nhiều:
+Nội dung cần làm tiếp:
+Điều cần tránh tháng sau:
+```
 
----
+## Quy Tắc Dùng Số Liệu Trong Content
 
-## Top Performing Content
-
-### [Kênh 1] — Top 5 (theo views)
-
-| #   | Views | Likes | Shares | Chủ đề             |
-| --- | ----- | ----- | ------ | ------------------ |
-| 1   | [SỐ]  | [SỐ]  | [SỐ]   | [Mô tả bài]        |
-| 2   | [SỐ]  | [SỐ]  | [SỐ]   | [Mô tả bài]        |
-| 3   | [SỐ]  | [SỐ]  | [SỐ]   | [Mô tả bài]        |
-
-> Điền sau khi scrape data qua `/init-context` hoặc nhập thủ công từ analytics
-
----
-
-## Insight Từ Data
-
-- [Pattern nội dung nào hoạt động tốt nhất]
-- [Hook type nào có engagement cao nhất]
-- [Format nào (video ngắn / viết / carousel) hiệu quả nhất]
-
----
-
-## Trạng Thái Dữ Liệu
-
-- [Kênh]: [Đã/Chưa] scrape — [Ngày scrape gần nhất]
-- Raw data: `context/data/` (được tạo bởi `/init-context`)
-- Cần re-scrape mỗi 1-2 tháng để giữ data mới
+- Chỉ dùng số liệu thật do user cung cấp hoặc lấy từ nguồn đã kiểm chứng.
+- Nếu chưa có dữ kiện, dùng cách nói định tính: “nhiều chủ nhà”, “không ít trường hợp”, “một số báo giá”.
+- Không tạo tỷ lệ phần trăm, số tiền, diện tích, số năm kinh nghiệm hoặc số lượng công trình nếu không có nguồn.

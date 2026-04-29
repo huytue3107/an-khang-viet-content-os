@@ -1,182 +1,126 @@
-# Lập Kế Hoạch
+# Lập Kế Hoạch — An Khang Việt Content OS
 
-Tạo một kế hoạch triển khai chi tiết cho các thay đổi trong workspace này. Kế hoạch phải là một tài liệu đầy đủ, nắm toàn bộ bối cảnh, lý do và các bước cụ thể để thực thi thay đổi một cách thống nhất với toàn dự án.
+Tạo kế hoạch triển khai chi tiết cho campaign, series, batch nội dung, template hoặc thay đổi workflow trong workspace AKV.
 
 ## Biến Đầu Vào
 
-request: $ARGUMENTS (mô tả điều bạn muốn lập kế hoạch: command mới, workflow mới, thay đổi cấu trúc, cập nhật template, v.v.)
+`request: $ARGUMENTS`
 
----
+## Nguyên Tắc
 
-## Hướng Dẫn
+- Đây là bước lập kế hoạch, không phải triển khai.
+- Luôn đọc `AKV-content.md`, `CLAUDE.md` và các file `context/` trước khi lập kế hoạch.
+- Kế hoạch phải bám 5 trụ cột AKV: kinh nghiệm xây nhà, cảnh báo rủi ro, tư duy thiết kế nhà đáng sống, quy trình An Khang Việt, case/công trình thực tế.
+- Kế hoạch phải chọn rõ tệp khách hàng theo mục 3.2-3.7 của `AKV-content.md`, nhất là 8 tệp mở rộng.
+- Không đưa vào kế hoạch các bài cần case, giá, vật tư, chính sách hoặc số liệu nếu chưa có dữ kiện thật.
+- Nếu thiếu thông tin quan trọng, ghi rõ trong “Câu hỏi mở” thay vì tự quyết.
 
-- **QUAN TRỌNG:** Bạn đang tạo KẾ HOẠCH, không phải triển khai thay đổi. Hãy nghiên cứu kỹ, suy nghĩ kỹ rồi mới tạo tài liệu kế hoạch.
-- Dùng khả năng suy luận để xem xét kỹ yêu cầu, cấu trúc workspace và cách tiếp cận phù hợp nhất.
-- Nghiên cứu workspace để hiểu các pattern, convention hiện có và vị trí của thay đổi này trong toàn hệ thống.
-- Tạo file kế hoạch trong thư mục `plans/` với tên: `YYYY-MM-DD-{ten-mo-ta}.md`
-  - Dùng ngày hôm nay
-  - Thay `{ten-mo-ta}` bằng một tên ngắn dạng kebab-case
-- Điền đầy đủ mọi phần trong mẫu kế hoạch bên dưới. Thay toàn bộ `<placeholder>` bằng nội dung cụ thể, có thể hành động được.
-- Hãy làm thật kỹ vì kế hoạch này sẽ được `/implement` thực thi và phải đủ rõ để không gây mơ hồ.
-- Bám theo pattern sẵn có. Hãy đọc những file tương tự trong workspace trước khi đề xuất cấu trúc mới.
+## Nghiên Cứu Trước Khi Viết
 
----
+1. Đọc:
+   - `AKV-content.md`
+   - `CLAUDE.md`
+   - `context/strategy.md`
+   - `context/icp.md`
+   - `context/voice-analysis.md`
+2. Nếu lập campaign, kiểm tra `posts/` và `outputs/` để tránh lặp chủ đề gần đây.
+3. Nếu có visual/carousel, kiểm tra `reference/` và script tương ứng.
 
-## Giai Đoạn Nghiên Cứu
+## File Kế Hoạch
 
-Trước khi viết kế hoạch, hãy điều tra:
+Tạo file trong `plans/`:
 
-1. **Đọc các file tham chiếu cốt lõi:**
-   - `CLAUDE.md` — tổng quan workspace
-   - `context/` — bối cảnh về người dùng và dự án
-
-2. **Khám phá những khu vực liên quan:**
-   - Nếu đang tạo command: đọc các command hiện có trong `.claude/commands/`
-   - Nếu đang chỉnh output: khám phá cấu trúc `outputs/` và ví dụ hiện có
-   - Nếu đang cập nhật template: kiểm tra `reference/` để xem các pattern hiện tại
-   - Nếu đang thêm script: rà `scripts/` để hiểu convention
-
-3. **Hiểu các kết nối:**
-   - Thay đổi này liên hệ với workflow hiện tại như thế nào?
-   - Những file nào đang tham chiếu hoặc phụ thuộc vào phần sẽ bị thay đổi?
-   - Có quy ước đặt tên nào cần tuân theo không?
-
----
+```text
+YYYY-MM-DD-{ten-mo-ta}.md
+```
 
 ## Mẫu Kế Hoạch
 
-Hãy viết kế hoạch theo đúng cấu trúc này:
-
 ```markdown
-# Kế Hoạch: <tiêu đề mô tả>
+# Kế Hoạch: <tiêu đề>
 
 **Tạo lúc:** <YYYY-MM-DD>
 **Trạng thái:** Draft
-**Yêu cầu:** <tóm tắt một dòng về điều được yêu cầu>
+**Yêu cầu:** <tóm tắt một dòng>
 
 ---
 
 ## Tổng Quan
 
-### Kế Hoạch Này Đạt Được Điều Gì
+<Kết quả cuối cùng, vì sao quan trọng với An Khang Việt Content.>
 
-<2-3 câu mô tả kết quả cuối cùng và vì sao nó quan trọng>
+## Trụ Cột Và Mục Tiêu
 
-### Vì Sao Điều Này Quan Trọng
+| Trụ cột AKV | Vai trò trong kế hoạch | Mục tiêu |
+| --- | --- | --- |
+| <trụ cột> | <nội dung sẽ làm> | <tạo niềm tin/tăng inbox/tăng lưu bài/...> |
 
-<Kết nối thay đổi này với mục tiêu hoặc sứ mệnh của dự án. Nó tạo thêm giá trị như thế nào?>
+## Đối Tượng Và Insight
 
----
+- **Đối tượng chính:** <nhóm chủ nhà>
+- **Tệp khách hàng:** <một trong 8 tệp AKV>
+- **Nỗi đau cần đánh vào:** <nỗi đau cụ thể>
+- **Hành động mong muốn:** <lưu bài/inbox/gửi báo giá/hỏi tư vấn/...>
 
-## Trạng Thái Hiện Tại
+## Thay Đổi Hoặc Nội Dung Đề Xuất
 
-### Cấu Trúc Liên Quan Đang Có
+### Nội dung/workflow cần tạo
 
-<Liệt kê file, thư mục hoặc pattern hiện có liên quan tới thay đổi này>
+| Hạng mục | Định dạng | Nền tảng | Ghi chú |
+| --- | --- | --- | --- |
+| <tên> | <post/script/checklist/carousel/...> | <Facebook/Zalo/...> | <ghi chú> |
 
-### Khoảng Trống Hoặc Vấn Đề Cần Giải Quyết
+### File mới cần tạo
 
-<Hiện đang thiếu gì, hỏng gì hoặc chưa tối ưu mà kế hoạch này sẽ xử lý?>
+| Đường dẫn | Mục đích |
+| --- | --- |
+| `path/to/file.md` | <mục đích> |
 
----
+### File cần chỉnh sửa
 
-## Thay Đổi Đề Xuất
+| Đường dẫn | Nội dung thay đổi |
+| --- | --- |
+| `path/to/file.md` | <mô tả> |
 
-### Tóm Tắt Thay Đổi
+## Quyết Định Nội Dung
 
-<Danh sách bullet ở mức cao về toàn bộ thay đổi>
-
-### File Mới Cần Tạo
-
-| Đường dẫn file    | Mục đích                |
-| ----------------- | ----------------------- |
-| `path/to/file.md` | File này dùng để làm gì |
-
-### File Cần Chỉnh Sửa
-
-| Đường dẫn file    | Nội dung thay đổi    |
-| ----------------- | -------------------- |
-| `path/to/file.md` | Mô tả phần chỉnh sửa |
-
-### File Cần Xóa (nếu có)
-
-<Liệt kê các file sẽ bị xóa và lý do>
-
----
-
-## Quyết Định Thiết Kế
-
-### Các Quyết Định Chính
-
-1. **<Quyết định>**: <Lý do>
-2. **<Quyết định>**: <Lý do>
-
-### Các Phương Án Đã Cân Nhắc
-
-<Đã cân nhắc những cách nào khác và tại sao không chọn?>
-
-### Câu Hỏi Mở (nếu có)
-
-<Liệt kê những quyết định vẫn cần user trả lời trước khi triển khai>
-
----
+- **Voice:** Chuyên Gia Xây Nhà, thẳng, thật, dễ hiểu.
+- **Tệp khách hàng và góc viết:** <vì sao chọn tệp này>
+- **CTA:** <CTA mềm dự kiến>
+- **Điều không được bịa:** <giá/case/chính sách/vật tư/...>
+- **Visual:** <ảnh công trình/infographic/carousel/không dùng>
 
 ## Các Bước Thực Hiện
 
-### Bước 1: <Tên bước>
-
-<Mô tả chi tiết việc cần làm>
-
-**Hành động:**
-
-- <Hành động cụ thể>
-
-**File bị ảnh hưởng:**
-
-- `path/to/file.md`
-
----
-
-<Tiếp tục với bao nhiêu bước cũng được nếu cần>
-
----
+1. <bước cụ thể>
+2. <bước cụ thể>
+3. <bước cụ thể>
 
 ## Checklist Kiểm Tra
 
-- [ ] <Bước xác minh>
-- [ ] <Bước xác minh>
-
----
+- [ ] Đã đối chiếu `AKV-content.md`.
+- [ ] Đã chọn tệp khách hàng cụ thể, không viết chung chung.
+- [ ] Không có dữ kiện bị bịa.
+- [ ] Mỗi bài có hook, nỗi đau, lời khuyên cụ thể, CTA mềm.
+- [ ] Format lưu trữ đúng chuẩn `posts/README.md`.
+- [ ] Dashboard build được nếu có post mới.
 
 ## Tiêu Chí Thành Công
 
-1. <Tiêu chí cụ thể, đo được>
-2. <Tiêu chí cụ thể, đo được>
+1. <tiêu chí đo được>
+2. <tiêu chí đo được>
+3. <tiêu chí đo được>
 
----
+## Câu Hỏi Mở
 
-## Ghi Chú
-
-<Bối cảnh bổ sung hoặc lưu ý cho tương lai>
+<Nếu không có, ghi “Không có”.>
 ```
 
----
+## Báo Cáo Sau Khi Tạo Plan
 
-## Tiêu Chuẩn Chất Lượng
+Nêu ngắn gọn:
 
-- **Đầy đủ:** Mọi phần đều được điền bằng nội dung cụ thể
-- **Có thể hành động:** Các bước phải đủ rõ để `/implement` chạy không cần hỏi lại
-- **Nhất quán:** Bám theo pattern có sẵn của workspace
-- **Rõ ràng:** Người chưa quen dự án vẫn có thể hiểu và thực hiện
-- **Truy vết được:** Mọi thay đổi đều gắn lại với mục tiêu và lý do
-
----
-
-## Báo Cáo
-
-Sau khi tạo xong kế hoạch:
-
-1. Tóm tắt ngắn kế hoạch bao gồm những gì
-2. Liệt kê mọi câu hỏi mở còn cần user trả lời
-3. Cung cấp full path tới file kế hoạch
-4. Nhắc user chạy `/implement plans/YYYY-MM-DD-{name}.md` để thực thi
+- Kế hoạch đã bao gồm gì.
+- Câu hỏi mở còn lại.
+- Full path tới file plan.
+- Lệnh `/implement plans/YYYY-MM-DD-{name}.md` để thực thi khi sẵn sàng.

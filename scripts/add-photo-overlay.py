@@ -1,27 +1,27 @@
 #!/usr/bin/env python3
 """
-Add scroll-stopping text overlay to personal photos.
+Add scroll-stopping text overlay to An Khang Viet photos.
 
 Adds a semi-transparent dark gradient + bold hook text to a photo,
-matching the style used by top Vietnamese AI/business content creators.
+matching the practical An Khang Viet Content visual style.
 
 Usage:
     python3 scripts/add-photo-overlay.py \
         --photo context/images/photo.jpg \
-        --text "5 sai lầm AI mà 90% nhà kinh doanh đang bỏ lỡ" \
+        --text "Đừng ký hợp đồng xây nhà khi còn 5 điểm mơ hồ" \
         --output posts/017-example/image.png
 
-    # With highlighted (lime green) words:
+    # With highlighted (construction green) words:
     python3 scripts/add-photo-overlay.py \
         --photo context/images/photo.jpg \
-        --text "4 năm làm nghề AI và đây là 3 CÔNG CỤ giúp mình X5 thu nhập" \
-        --highlight "3 CÔNG CỤ" "X5" \
+        --text "7 ĐIỀU chủ nhà nên kiểm tra trước khi ký" \
+        --highlight "7" "ĐIỀU" \
         --output posts/017-example/image.png
 
     # Position: bottom (default) | center | top
     python3 scripts/add-photo-overlay.py \
         --photo context/images/photo.jpg \
-        --text "AI trong năm 2026: cửa sổ cơ hội mà 10 năm nữa bạn sẽ tiếc nuối" \
+        --text "Nhà đẹp mà ở bất tiện thì chỉ đẹp cho người ngoài xem" \
         --position center \
         --output posts/017-example/image.png
 """
@@ -35,8 +35,8 @@ from PIL import Image, ImageDraw, ImageFont
 # ─────────────────────────────────────────────
 # BRAND CONFIG
 # ─────────────────────────────────────────────
-BRAND_NAME   = "AI 5 PHÚT"
-ACCENT_COLOR = (200, 230, 74)        # Lime #C8E64A
+BRAND_NAME   = "AN KHANG VIET"
+ACCENT_COLOR = (47, 107, 79)         # Construction green #2F6B4F
 WHITE        = (255, 255, 255)
 BLACK        = (0, 0, 0)
 DARK_OVERLAY = (0, 0, 0, 180)        # Semi-transparent black
@@ -182,7 +182,7 @@ def add_overlay(photo_path, hook_text, output_path,
     brand_font = load_font(FONT_BOLD, 28)
     brand_bbox = draw.textbbox((0, 0), BRAND_NAME, font=brand_font)
     brand_w = brand_bbox[2] - brand_bbox[0]
-    # Lime pill background
+    # Brand pill background
     pad = 14
     pill_x1 = W - brand_w - pad * 2 - 30
     pill_y1 = H - 60
@@ -207,7 +207,7 @@ def main():
     parser.add_argument("--text",    required=True, help="Hook text to overlay")
     parser.add_argument("--output",  required=True, help="Output image path")
     parser.add_argument("--highlight", nargs="*", default=[],
-                        help="Words to highlight in lime green")
+                        help="Words to highlight in brand green")
     parser.add_argument("--position", choices=["bottom", "top", "center"],
                         default="bottom", help="Text position (default: bottom)")
     args = parser.parse_args()

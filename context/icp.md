@@ -1,68 +1,79 @@
-# ICP — Bạn Phục Vụ Ai
+# ICP — Chủ Nhà An Khang Việt Phục Vụ
 
-_Cập nhật lần cuối: [DATE] — Điền ngày bạn setup_
+_Cập nhật lần cuối: 2026-04-29_
+_Nguồn chính: `AKV-content.md`, đặc biệt mục 3.2-3.7_
 
-> **Hướng dẫn:** Mô tả chân dung khách hàng lý tưởng của bạn. Càng cụ thể, Claude càng tạo được content đúng tệp.
+## Tư Duy Chung
 
----
+Thị trường 2025-2026 không chỉ hỏi “xây hết bao nhiêu tiền?” mà hỏi “ai kiểm soát rủi ro cho tôi?”. Mỗi tệp khách hàng không mua cùng một thứ: có người mua sự an tâm, có người mua đẳng cấp, có người mua hiệu suất đầu tư, có người mua một đời sống dễ thở hơn.
 
-## ICP Chính: [BRAND_NAME] (B2C / Prosumer)
+Khi viết nội dung, phải chọn rõ tệp khách hàng, nỗi đau và điều họ thật sự muốn mua. Không viết chung chung cho “mọi chủ nhà” nếu brief không bắt buộc.
 
-**Vai trò:** [Ví dụ: Người đi làm, freelancer, solopreneur, founder SME, marketer, content creator]
-**Khu vực:** [Thị trường mục tiêu — ví dụ: Việt Nam, Đông Nam Á]
-**Ngôn ngữ:** [Tiếng Việt / Tiếng Anh / v.v.]
+## 8 Tệp Khách Hàng Chính
 
-**Đặc điểm:**
+| Tệp khách hàng | Nỗi đau lớn nhất | Thứ họ muốn mua | Tuyến nội dung nên dùng | CTA phù hợp |
+| --- | --- | --- | --- | --- |
+| Gia đình trẻ Gen Y/Gen Z xây căn nhà đầu tiên | Sợ phát sinh, sợ chọn sai, sợ đẹp trên ảnh nhưng mệt ngoài đời | Minh bạch và định hướng đúng | Checklist, bóc lỗi, phân bổ ngân sách, nhà nhỏ tiện | Gửi nhu cầu để định hướng chi phí |
+| Người tìm thiết kế thi công trọn gói | Sợ bán thầu, sợ báo giá mập mờ, sợ ký một bên làm một nẻo | Một đầu mối chịu trách nhiệm | So báo giá, hợp đồng, quy trình, giám sát, bảo hành | Gửi báo giá đang có để biết cách so |
+| Chủ biệt thự, nhà phố cao cấp | Sợ làm không đúng bản vẽ, vật liệu đắt nhưng thi công kém, lỗi phần ẩn | Sự chỉn chu, riêng tư, đáng tiền | Tiêu chuẩn hoàn thiện, quy trình giám sát, hệ thống kỹ thuật ẩn | Đặt lịch tư vấn phương án tổng thể |
+| Chủ nhà sửa chữa, cải tạo nhà cũ | Sợ sửa nhỏ thành sửa lớn, thấm/nứt/điện nước cũ phát sinh | Bắt đúng bệnh nhà cũ | Khảo sát hiện trạng, chống thấm, điện nước, chia giai đoạn sửa | Gửi hiện trạng nhà để được tư vấn hướng sửa |
+| Nhà đầu tư bất động sản/cho thuê/homestay | Sợ đầu tư quá tay, đẹp nhưng khó bảo trì, chậm khai thác | Hiệu suất khai thác | Hoàn vốn, vật liệu bền, concept lên ảnh tốt, dễ bảo trì | Gửi mục tiêu khai thác và ngân sách |
+| Khách smarthome, nhà xanh | Sợ công nghệ rối, không đáng tiền, mất mạng là phiền | Tiện nghi có kiểm soát | Smarthome vừa đủ, tiết kiệm điện, hướng nắng gió, vận hành bền | Gửi thói quen sinh hoạt để chọn giải pháp |
+| Gia đình nhiều thế hệ | Sợ mâu thuẫn nhu cầu, bất tiện cho người lớn tuổi, thiếu riêng tư | Hài hòa, an toàn, lâu dài | Công năng theo tuổi, an toàn, không gian chung/riêng | Gửi số thành viên và thói quen sinh hoạt |
+| Người nâng cấp phong cách sống | Sợ chạy trend, nhà đẹp nhưng thiếu chỗ chứa và không hợp thói quen | Bản sắc cá nhân có công năng | Phong cách, gu, ánh sáng, chất liệu, chỗ chứa, tiết chế | Gửi phong cách thích và nhu cầu sống |
 
-- [Đặc điểm 1 — ví dụ: Đã nghe về AI, tò mò nhưng chưa biết bắt đầu từ đâu]
-- [Đặc điểm 2 — ví dụ: Bị ngợp vì quá nhiều công cụ, không biết chọn cái nào]
-- [Đặc điểm 3 — ví dụ: Muốn kết quả thực dụng, không muốn học lý thuyết dài dòng]
-- [Đặc điểm 4 — ví dụ: Mức độ kỹ thuật thấp đến trung bình]
+## Công Thức Chọn Tệp Theo Mục Tiêu
 
-**Pain points cốt lõi:**
+### Tạo Tin Tưởng
 
-- "[Pain point 1 — viết theo góc nhìn của họ, dùng ngôn ngữ họ nói]"
-- "[Pain point 2]"
-- "[Pain point 3]"
-- "[Pain point 4]"
+Ưu tiên:
 
-**Họ dành thời gian ở đâu:** [Ví dụ: TikTok, Facebook, YouTube, LinkedIn]
+- Người xây nhà lần đầu.
+- Người tìm đơn vị thiết kế thi công trọn gói.
+- Chủ nhà sửa chữa cải tạo.
 
-**Điều khiến họ hành động:**
+Cấu trúc: nỗi lo thật -> bản chất vấn đề -> lỗi thường gặp -> cách kiểm tra/chọn đúng -> CTA hỏi tình huống riêng.
 
-- [Trigger 1 — ví dụ: Demo trực quan, thấy ngay kết quả]
-- [Trigger 2 — ví dụ: Use case cụ thể gần với công việc của họ]
-- [Trigger 3 — ví dụ: Số liệu cụ thể (tiết kiệm X giờ, tăng Y lần)]
-- [Trigger 4 — ví dụ: Giọng người thật, không corporate]
+### Tạo Lưu Bài
 
----
+Ưu tiên:
 
-## ICP Phụ: [COMPANY_NAME] (B2B — nếu có)
+- Người xây nhà lần đầu.
+- Chủ nhà sửa chữa cải tạo.
+- Gia đình nhiều thế hệ.
+- Khách smarthome, nhà xanh.
 
-**Vai trò:** [Ví dụ: Decision maker — Giám đốc, Trưởng phòng, Founder]
-**Quy mô công ty:** [Ví dụ: SME đến doanh nghiệp tầm trung, 10–500 người]
-**Khu vực:** [Thị trường mục tiêu]
+Cấu trúc: checklist 5-7 điểm -> giải thích ngắn -> lỗi nếu bỏ qua -> gợi ý hành động.
 
-**Đặc điểm:**
+### Muốn Inbox
 
-- [Đặc điểm B2B 1]
-- [Đặc điểm B2B 2]
-- [Đặc điểm B2B 3]
+Ưu tiên:
 
-**Pain points cốt lõi:**
+- Người đang so sánh nhà thầu.
+- Người chuẩn bị xây nhà lần đầu.
+- Chủ biệt thự, nhà phố cao cấp.
+- Nhà đầu tư bất động sản.
 
-- [Pain point B2B 1]
-- [Pain point B2B 2]
-- [Pain point B2B 3]
+Cấu trúc: tình huống cụ thể -> hậu quả nếu làm sai -> cách An Khang Việt nhìn vấn đề -> mời gửi thông tin để tư vấn đúng hơn.
 
-**Điều khiến họ hành động:**
+### Tạo Tranh Luận
 
-- [Trigger B2B 1 — ví dụ: Demo sản phẩm trực tiếp với dữ liệu của họ]
-- [Trigger B2B 2 — ví dụ: Case study từ doanh nghiệp tương tự]
-- [Trigger B2B 3 — ví dụ: ROI rõ ràng]
+Ưu tiên:
 
----
+- Người trẻ thích nhà đẹp.
+- Người chọn xây trọn gói.
+- Người đầu tư căn hộ cho thuê.
+- Người mê smarthome.
 
-## Ghi Chú
+Cấu trúc: quan điểm hơi ngược số đông -> thực tế công trình -> ngoại lệ công bằng -> câu hỏi mở.
 
-ICP này được xây dựng từ [nguồn — ví dụ: phân tích data analytics, phỏng vấn khách hàng, thông tin xác nhận trực tiếp]. Cần review lại sau khi có thêm dữ liệu.
+## Quy Tắc Viết Theo Tệp
+
+- **Người trẻ xây nhà lần đầu:** nói về nhu cầu sống, ngân sách dự phòng, đẹp trên ảnh chưa chắc tiện ngoài đời. Không hạ thấp họ là “không biết gì”.
+- **Người chọn nhà thầu trọn gói:** nói về so cùng phạm vi, trọn gói phải trọn trách nhiệm, hợp đồng rõ. Không nói “bên khác toàn lừa”.
+- **Khách cao cấp:** nói về quy trình, phần ẩn, vật liệu đắt cần tay nghề tương xứng. Không lạm dụng “đẳng cấp thượng lưu”.
+- **Khách cải tạo nhà cũ:** nói về khảo sát, bắt bệnh, chống thấm, điện nước, công năng. Không báo giá ngay khi chưa khảo sát.
+- **Nhà đầu tư:** nói về hiệu suất khai thác, vật liệu bền, concept phục vụ dòng tiền. Không hứa “cứ làm cao cấp là cho thuê được giá”.
+- **Smarthome/nhà xanh:** nói công nghệ đi sau thói quen sống, tiết kiệm năng lượng bắt đầu từ thiết kế. Không nói lắp càng nhiều càng thông minh.
+- **Gia đình nhiều thế hệ:** nói dung hòa nhu cầu, an toàn, không gian chung/riêng. Không bảo cứ nghe người trả tiền.
+- **Nâng cấp phong cách sống:** nói có gu là biết tiết chế, phong cách phải phục vụ cách sống. Không chạy trend vô điều kiện.
