@@ -2,8 +2,8 @@
 """
 Generate an An Khang Viet carousel PDF with a clean, practical style.
 
-Style: light neutral background, construction-inspired geometry, clear typography,
-dark green / earth-tone accents, brand banner.
+Style: light neutral background, roof/home-inspired geometry, clear typography,
+An Khang red / growth orange / roof brown accents, brand banner.
 
 Usage:
     python3 scripts/generate-carousel.py --json content.json --output posts/001-test/carousel.pdf
@@ -12,6 +12,7 @@ Usage:
 Dimensions: 1080x1350px (4:5 social carousel standard)
 
 Brand section is prefilled for An Khang Viet and can be adjusted when official visual guidelines are available.
+Every slide uses logo AKV.png as a centered 50% width watermark at 20% opacity.
 """
 
 import json
@@ -20,6 +21,7 @@ import os
 import sys
 import argparse
 import textwrap
+from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 # ============================================================
@@ -28,16 +30,19 @@ from PIL import Image, ImageDraw, ImageFont
 BRAND_NAME = "AN KHANG VIET"            # ASCII brand mark for reliable font rendering
 AUTHOR_NAME = "An Khang Việt"
 AUTHOR_ROLE = "Tư vấn thiết kế và xây nhà trọn gói"
+LOGO_PATH = Path(__file__).resolve().parents[1] / "logo AKV.png"
 
 # --- BRAND COLORS (RGB) ---
-BG = (247, 244, 236)       # #F7F4EC warm neutral background
-TEXT = (31, 37, 32)         # #1F2520 deep charcoal green
-ACCENT = (47, 107, 79)      # #2F6B4F construction green
-SUBTLE_GREEN = (224, 235, 226)  # Light green for decorative circles
-BANNER = (31, 37, 32)       # #1F2520 dark banner
+BG = (244, 241, 237)       # #F4F1ED Ghi Nen Mong
+TEXT = (31, 31, 31)         # #1F1F1F Den Chu Chinh
+ACCENT = (229, 38, 32)      # #E52620 Do An Khang
+SECONDARY = (243, 107, 33)  # #F36B21 Cam Phat Trien
+SUBTLE_GREEN = (245, 224, 204)  # Warm orange tint for decorative circles
+BANNER = (31, 31, 31)       # #1F1F1F dark banner
 WHITE = (255, 255, 255)
-GRAY = (96, 102, 95)        # #60665F
-LIGHT_CIRCLE = (219, 207, 182)  # Earth-tone decorative circles
+GRAY = (92, 82, 74)         # Warm gray
+LIGHT_CIRCLE = (167, 122, 77)  # #A77A4D Nau Mai Nha
+WINDOW_YELLOW = (255, 213, 0)  # #FFD500 Vang Anh Sang
 # ============================================================
 
 # --- DIMENSIONS ---
@@ -208,6 +213,25 @@ def draw_black_dot(draw, x, y, r=10):
 def draw_circle_outline(draw, x, y, r=10, width=2):
     draw.ellipse([(x - r, y - r), (x + r, y + r)], outline=TEXT, width=width)
 
+def add_center_logo_watermark(img, logo_path=LOGO_PATH, width_ratio=0.5, opacity=0.2):
+    """Add AKV logo centered at 50% slide width and 20% opacity for carousel slides."""
+    if not logo_path.exists():
+        return img
+
+    base = img.convert("RGBA")
+    logo = Image.open(logo_path).convert("RGBA")
+    target_w = int(W * width_ratio)
+    scale = target_w / logo.width
+    target_h = int(logo.height * scale)
+    logo = logo.resize((target_w, target_h), Image.LANCZOS)
+
+    alpha = logo.getchannel("A").point(lambda p: int(p * opacity))
+    logo.putalpha(alpha)
+    x = (W - logo.width) // 2
+    y = (H - logo.height) // 2
+    base.alpha_composite(logo, (x, y))
+    return base.convert("RGB")
+
 
 # --- ILLUSTRATION GENERATORS ---
 
@@ -302,6 +326,19 @@ def illust_circles_row(draw, cx, cy):
         else:
             draw_circle_outline(draw, x, cy, 25, 3)
 
+def illust_roof_window(draw, cx, cy):
+    roof = [(cx - 150, cy + 10), (cx, cy - 100), (cx + 150, cy + 10)]
+    body = [(cx - 105, cy + 10), (cx + 105, cy + 10), (cx + 105, cy + 115), (cx - 105, cy + 115)]
+    draw.polygon(roof, fill=LIGHT_CIRCLE)
+    draw.line([roof[0], roof[1], roof[2]], fill=ACCENT, width=8)
+    draw.rectangle(body, outline=TEXT, width=4)
+    draw.rectangle([(cx - 28, cy + 42), (cx + 28, cy + 96)], fill=WINDOW_YELLOW, outline=TEXT, width=3)
+
+def illust_slanted_pattern(draw, cx, cy):
+    for i in range(3):
+        x = cx - 95 + i * 70
+        draw.line([(x, cy + 70), (x + 72, cy - 70)], fill=ACCENT if i == 0 else SECONDARY, width=18)
+
 ILLUSTRATIONS = [
     illust_radial_dots,
     illust_stacked_bars,
@@ -312,6 +349,8 @@ ILLUSTRATIONS = [
     illust_wave_dots,
     illust_diamond,
     illust_circles_row,
+    illust_roof_window,
+    illust_slanted_pattern,
 ]
 
 
@@ -340,6 +379,7 @@ def make_cover_slide(title, emphasis=None):
     img_rgba = img.convert("RGBA")
     img_rgba = Image.alpha_composite(img_rgba, overlay)
     img = img_rgba.convert("RGB")
+    img = add_center_logo_watermark(img)
     draw = ImageDraw.Draw(img)
 
     dot_positions = [(120, 160), (200, 120), (160, 200), (W - 140, 180), (W - 200, 130), (W - 170, 220)]
@@ -387,6 +427,8 @@ def make_cover_slide(title, emphasis=None):
 def make_content_slide(number, heading, subtitle, takeaway, illust_fn):
     """Numbered content slide."""
     img, draw = new_slide()
+    img = add_center_logo_watermark(img)
+    draw = ImageDraw.Draw(img)
 
     margin = 80
     max_w = W - margin * 2
@@ -426,6 +468,7 @@ def make_cta_slide(cta_text, cta_subtitle=""):
     img_rgba = img.convert("RGBA")
     img_rgba = Image.alpha_composite(img_rgba, overlay)
     img = img_rgba.convert("RGB")
+    img = add_center_logo_watermark(img)
     draw = ImageDraw.Draw(img)
 
     f_cta = font_serif_bold(54)

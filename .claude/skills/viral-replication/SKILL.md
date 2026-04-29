@@ -14,9 +14,10 @@ The final output must follow `AKV-content.md` and sound like **Chuyên Gia Xây 
 Read:
 
 1. `AKV-content.md`
-2. `context/voice-analysis.md`
-3. `context/icp.md`
-4. `context/strategy.md`
+2. `context/brand-dna.md`
+3. `context/voice-analysis.md`
+4. `context/icp.md`
+5. `context/strategy.md`
 
 ## What To Borrow
 
@@ -92,8 +93,8 @@ Requirements:
 If adapting a visual, keep the information architecture but use AKV style:
 
 - Light neutral background.
-- Dark green or earth-gold accent.
-- Construction cues: grid, blueprint line, ruler, material blocks, checklist marks.
+- Đỏ An Khang, Cam Phát Triển, Nâu Mái Nhà, Vàng Ánh Sáng used with restraint.
+- Construction and brand cues: A roof shape, 3 slanted orange-red lines, window square, grid, blueprint line, ruler, material blocks, checklist marks.
 - Vietnamese text with exact diacritics.
 - Bottom or corner brand mark: “AN KHANG VIỆT”.
 
@@ -102,6 +103,8 @@ For infographic:
 ```powershell
 python scripts/generate-infographic.py --reference reference/infographic-ref-1.jpeg --output posts/NNN-slug/image.png --prompt "<prompt AKV tiếng Việt có dấu>"
 ```
+
+This uses OpenRouter with default model `google/gemini-3.1-flash-image-preview`. Do not use older image providers.
 
 For carousel:
 

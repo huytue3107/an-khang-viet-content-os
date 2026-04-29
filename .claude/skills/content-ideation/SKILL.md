@@ -12,10 +12,11 @@ Generate ideas that fit `AKV-content.md` and the voice **Chuyên Gia Xây Nhà**
 Read before ideating:
 
 1. `AKV-content.md`
-2. `context/icp.md`
-3. `context/strategy.md`
-4. `context/voice-analysis.md`
-5. Recent files in `posts/` if any
+2. `context/brand-dna.md`
+3. `context/icp.md`
+4. `context/strategy.md`
+5. `context/voice-analysis.md`
+6. Recent files in `posts/` if any
 
 ## Core Rule
 

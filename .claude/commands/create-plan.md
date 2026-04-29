@@ -19,6 +19,7 @@ Tạo kế hoạch triển khai chi tiết cho campaign, series, batch nội dun
 
 1. Đọc:
    - `AKV-content.md`
+   - `context/brand-dna.md`
    - `CLAUDE.md`
    - `context/strategy.md`
    - `context/icp.md`
@@ -89,6 +90,7 @@ YYYY-MM-DD-{ten-mo-ta}.md
 - **CTA:** <CTA mềm dự kiến>
 - **Điều không được bịa:** <giá/case/chính sách/vật tư/...>
 - **Visual:** <ảnh công trình/infographic/carousel/không dùng>
+- **Brand DNA visual:** <màu/pattern/icon/mood phù hợp nếu có visual>
 
 ## Các Bước Thực Hiện
 

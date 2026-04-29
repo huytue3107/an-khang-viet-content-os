@@ -26,6 +26,7 @@ Input có thể là:
 | File | Khi nào cập nhật |
 | --- | --- |
 | `context/profile.md` | Có thay đổi định vị, kênh, cách xưng hô, hình ảnh thương hiệu |
+| `context/brand-dna.md` | Có thay đổi logo, màu sắc, font, slogan, moodboard hoặc quy chuẩn nhận diện |
 | `context/business.md` | Có dịch vụ, quy trình, chính sách, thông tin liên hệ thật |
 | `context/icp.md` | Có chân dung khách hàng mới hoặc insight sales |
 | `context/strategy.md` | Có mục tiêu/campaign/trụ cột ưu tiên mới |
@@ -36,7 +37,7 @@ Input có thể là:
 ## Quy Trình
 
 1. Đọc `AKV-content.md`, `CLAUDE.md`, `context/`.
-2. Phân loại input thành: brand, dịch vụ, ICP, voice, visual, metrics, case.
+2. Phân loại input thành: brand DNA, dịch vụ, ICP, voice, visual, metrics, case.
 3. Cập nhật file context phù hợp.
 4. Nếu có case thật, lưu tóm tắt dữ kiện vào `context/data/` hoặc plan/post liên quan.
 5. Chạy rà soát để đảm bảo không có placeholder hoặc dữ kiện bị suy diễn.

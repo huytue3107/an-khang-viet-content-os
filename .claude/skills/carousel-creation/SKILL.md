@@ -12,8 +12,9 @@ Create carousels that homeowners can save and re-read before building, renovatin
 Read:
 
 1. `AKV-content.md`
-2. `context/voice-analysis.md`
-3. `context/strategy.md`
+2. `context/brand-dna.md`
+3. `context/voice-analysis.md`
+4. `context/strategy.md`
 
 ## Best Carousel Topics
 
@@ -100,11 +101,14 @@ Caption should not duplicate every slide word-for-word. It should:
 
 Default AKV style:
 
-- Light neutral background.
-- Dark green and earth-gold accents.
+- Light neutral background `#F4F1ED` or white.
+- Đỏ An Khang `#E52620` for main emphasis.
+- Cam Phát Triển `#F36B21` for slanted lines/icons.
+- Nâu Mái Nhà `#A77A4D` for roof/foundation shapes.
+- Vàng Ánh Sáng `#FFD500` only as small warm highlights.
 - Clean typography, high contrast.
-- Minimal construction-inspired geometry: grids, dots, ruler lines, blueprint cues.
-- No neon, no luxury cliché, no overdecorated real estate look.
+- Minimal roof/home-inspired geometry: A roof shape, slanted 60-degree lines, window square, grids, ruler lines, blueprint cues.
+- No neon, no glossy real-estate hype, no cluttered “sale đất nền chợ búa” look.
 
 ## Quality Checklist
 

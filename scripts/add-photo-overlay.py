@@ -4,6 +4,7 @@ Add scroll-stopping text overlay to An Khang Viet photos.
 
 Adds a semi-transparent dark gradient + bold hook text to a photo,
 matching the practical An Khang Viet Content visual style.
+Adds logo AKV.png to the top-left corner.
 
 Usage:
     python3 scripts/add-photo-overlay.py \
@@ -11,7 +12,7 @@ Usage:
         --text "Đừng ký hợp đồng xây nhà khi còn 5 điểm mơ hồ" \
         --output posts/017-example/image.png
 
-    # With highlighted (construction green) words:
+    # With highlighted (Do An Khang red) words:
     python3 scripts/add-photo-overlay.py \
         --photo context/images/photo.jpg \
         --text "7 ĐIỀU chủ nhà nên kiểm tra trước khi ký" \
@@ -30,13 +31,16 @@ import argparse
 import os
 import sys
 import textwrap
+from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 # ─────────────────────────────────────────────
 # BRAND CONFIG
 # ─────────────────────────────────────────────
 BRAND_NAME   = "AN KHANG VIET"
-ACCENT_COLOR = (47, 107, 79)         # Construction green #2F6B4F
+LOGO_PATH    = Path(__file__).resolve().parents[1] / "logo AKV.png"
+ACCENT_COLOR = (229, 38, 32)         # Do An Khang #E52620
+SECONDARY_COLOR = (243, 107, 33)     # Cam Phat Trien #F36B21
 WHITE        = (255, 255, 255)
 BLACK        = (0, 0, 0)
 DARK_OVERLAY = (0, 0, 0, 180)        # Semi-transparent black
@@ -47,6 +51,26 @@ W, H = 1080, 1350
 # Font paths
 FONT_BOLD   = "C:/Windows/Fonts/arialbd.ttf"
 FONT_NORMAL = "C:/Windows/Fonts/arial.ttf"
+
+
+def add_top_left_logo(img, logo_path=LOGO_PATH, max_width=190, margin=34):
+    """Add the official AKV logo to the top-left corner of a single image."""
+    if not logo_path.exists():
+        return img
+
+    logo = Image.open(logo_path).convert("RGBA")
+    scale = min(max_width / logo.width, 1.0)
+    logo = logo.resize((int(logo.width * scale), int(logo.height * scale)), Image.LANCZOS)
+
+    plate_pad = 14
+    plate = Image.new(
+        "RGBA",
+        (logo.width + plate_pad * 2, logo.height + plate_pad * 2),
+        (255, 255, 255, 225),
+    )
+    plate.alpha_composite(logo, (plate_pad, plate_pad))
+    img.alpha_composite(plate, (margin, margin))
+    return img
 
 
 def load_font(path, size):
@@ -151,6 +175,7 @@ def add_overlay(photo_path, hook_text, output_path,
             draw_ov.line([(0, y), (W, y)], fill=(0, 0, 0, alpha))
 
     img = Image.alpha_composite(img, overlay)
+    img = add_top_left_logo(img)
 
     # ── Text ─────────────────────────────────────────────────
     draw = ImageDraw.Draw(img)
@@ -190,6 +215,8 @@ def add_overlay(photo_path, hook_text, output_path,
     pill_y2 = H - 28
     draw.rounded_rectangle([pill_x1, pill_y1, pill_x2, pill_y2],
                             radius=10, fill=ACCENT_COLOR)
+    draw.line([(pill_x1 + 12, pill_y2 + 5), (pill_x1 + 58, pill_y1 - 5)],
+              fill=SECONDARY_COLOR, width=5)
     draw.text((pill_x1 + pad, pill_y1 + 4), BRAND_NAME,
               font=brand_font, fill=BLACK)
 
@@ -207,7 +234,7 @@ def main():
     parser.add_argument("--text",    required=True, help="Hook text to overlay")
     parser.add_argument("--output",  required=True, help="Output image path")
     parser.add_argument("--highlight", nargs="*", default=[],
-                        help="Words to highlight in brand green")
+                        help="Words to highlight in brand red")
     parser.add_argument("--position", choices=["bottom", "top", "center"],
                         default="bottom", help="Text position (default: bottom)")
     args = parser.parse_args()

@@ -1,7 +1,7 @@
 # Kinh Doanh — An Khang Việt
 
 _Cập nhật lần cuối: 2026-04-29_
-_Nguồn chính: `AKV-content.md`_
+_Nguồn chính: `AKV-content.md`, `context/brand-dna.md`_
 
 ## Cấu Trúc Thương Hiệu
 
@@ -10,11 +10,19 @@ _Nguồn chính: `AKV-content.md`_
 **Mục đích:** Xây dựng niềm tin và nhu cầu tư vấn cho nhóm khách đang quan tâm xây nhà, sửa nhà, thiết kế nhà và chọn nhà thầu.
 **Vai trò:** Giáo dục thị trường, cảnh báo rủi ro, giúp chủ nhà hiểu quy trình và ra quyết định tỉnh táo hơn.
 **Giọng thương hiệu:** Chuyên gia xây nhà nói thật, nói thẳng, dễ hiểu, có nghề, có tâm, hơi dí dỏm, hơi trào phúng.
+**DNA nhận diện:** Nhà ở, mái ấm, xây dựng, bất động sản, an cư, phát triển bền vững.
 
 ### An Khang Việt
 
 **Nhóm dịch vụ trọng tâm:** Thiết kế, tư vấn và xây nhà trọn gói.
 **Thông tin chi tiết về giá, vật tư, chính sách, bảo hành:** Chỉ dùng khi user cung cấp dữ kiện thật trong brief hoặc file context bổ sung. Không tự suy diễn.
+
+## Hệ Giá Trị Thương Hiệu
+
+- **An:** an toàn, rõ ràng, không mập mờ; gắn với quy trình, bảo hành, cam kết, sự yên tâm.
+- **Khang:** phát triển, thịnh vượng, tài sản, chất lượng sống và giá trị dài hạn.
+- **Việt:** am hiểu khí hậu, thói quen sống, tài chính và nếp nhà của người Việt.
+- **Vững:** chắc, rõ, ít bay bổng; tinh thần thị giác và vận hành của thương hiệu.
 
 ## Khách Hàng Mục Tiêu
 

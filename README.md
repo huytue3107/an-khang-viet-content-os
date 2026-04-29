@@ -4,6 +4,8 @@ Workspace này dùng để lập kế hoạch, viết, lưu trữ và kiểm tra
 
 Mục tiêu của hệ thống không phải viết bài cho có. Mỗi nội dung phải giúp chủ nhà hiểu rõ hơn trước khi xây, sửa, thiết kế hoặc chọn nhà thầu: rõ chi phí, rõ vật tư, rõ quy trình, đỡ mệt về sau.
 
+DNA nhận diện nằm trong `context/brand-dna.md`: **Chắc như nền móng. Ấm như mái nhà. Rõ như một cam kết.**
+
 ## Nguyên Tắc Lõi
 
 - Luôn đọc `AKV-content.md` trước khi viết nội dung mới hoặc tạo campaign.
@@ -25,11 +27,11 @@ Mục tiêu của hệ thống không phải viết bài cho có. Mỗi nội du
 /create-10-posts
 ```
 
-Nếu tạo visual bằng Kie.ai, cần cấu hình:
+Nếu tạo visual qua OpenRouter, cần cấu hình:
 
 ```powershell
 Copy-Item .env.example .env
-# Điền KIE_AI_API_KEY vào .env
+# Điền OPENROUTER_API_KEY vào .env
 ```
 
 ## Workspace Structure
@@ -41,7 +43,7 @@ Copy-Item .env.example .env
 ├── .claude/
 │   ├── commands/           # Workflow: prime, create-plan, implement, create-10-posts
 │   └── skills/             # Ideation, viral packaging, carousel theo chuẩn AKV
-├── context/                # Bối cảnh thương hiệu, ICP, chiến lược, voice, metrics
+├── context/                # Bối cảnh thương hiệu, brand DNA, ICP, chiến lược, voice, metrics
 ├── posts/                  # Nội dung cuối cùng, mỗi bài một thư mục NNN-slug
 ├── outputs/                # Dashboard, draft, idea bank, batch plan
 ├── reference/              # Visual refs, tư liệu phụ, ví dụ tham khảo
@@ -114,10 +116,25 @@ Mỗi bài nằm trong `posts/NNN-slug/post.md`:
 
 ## Visual Workflow
 
-- Infographic dùng `scripts/generate-infographic.py`, prompt tiếng Việt có dấu và style AKV.
+- Infographic dùng `scripts/generate-infographic.py` qua OpenRouter, mặc định model `google/gemini-3.1-flash-image-preview`.
+- Prompt tạo ảnh phải dùng tiếng Việt có dấu, style AKV, và không bịa dữ kiện kỹ thuật/giá/case.
 - Carousel dùng `scripts/generate-carousel.py`, schema `content.json` gồm `title`, `title_emphasis`, `slides`, `cta_text`, `cta_subtitle`.
 - Dashboard dùng `scripts/build-dashboard.py`, output tại `outputs/dashboard.html`.
 - Không generate ảnh tốn API trước khi nội dung text đã đủ chắc.
+
+Visual mặc định dùng palette logo:
+
+- `#E52620` Đỏ An Khang.
+- `#F36B21` Cam Phát Triển.
+- `#A77A4D` Nâu Mái Nhà.
+- `#FFD500` Vàng Ánh Sáng.
+- `#F4F1ED` Ghi Nền Móng.
+- `#1F1F1F` Đen Chữ Chính.
+
+Logo usage:
+
+- Ảnh đơn/infographic: tự đóng `logo AKV.png` ở góc trái trên.
+- Carousel: tự đóng `logo AKV.png` ở chính giữa từng slide, rộng 50% canvas, opacity 20%.
 
 ## Quality Bar
 

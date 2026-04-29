@@ -1,7 +1,7 @@
 # Hồ Sơ — An Khang Việt Content
 
 _Cập nhật lần cuối: 2026-04-29_
-_Nguồn chính: `AKV-content.md`_
+_Nguồn chính: `AKV-content.md`, `context/brand-dna.md`_
 
 ## Danh Tính
 
@@ -17,6 +17,18 @@ An Khang Việt Content nói với người đang chuẩn bị xây, sửa, thi�
 
 An Khang Việt không viết để khoe mình giỏi. An Khang Việt viết để chủ nhà bớt mơ hồ, bớt mất tiền oan và có thêm niềm tin trước khi đặt viên gạch đầu tiên.
 
+Định vị nhận diện:
+
+> **AN KHANG VIỆT là thương hiệu kiến tạo không gian sống vững chắc, an tâm và có giá trị lâu dài cho người Việt.**
+
+Tinh thần thương hiệu:
+
+> **Chắc như nền móng. Ấm như mái nhà. Rõ như một cam kết.**
+
+Khẩu hiệu ưu tiên:
+
+> **An cư vững vàng, khang thịnh dài lâu.**
+
 Tính cách thương hiệu:
 
 - Có nghề thật.
@@ -25,6 +37,7 @@ Tính cách thương hiệu:
 - Thẳng thắn nhưng không xúc phạm.
 - Cảnh báo thực tế nhưng không hù dọa.
 - Bán hàng mềm, không ép inbox.
+- Chắc chắn, ấm áp, thực tế, bản địa, có khát vọng phát triển.
 
 ## Cách Xưng Hô
 

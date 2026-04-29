@@ -15,7 +15,7 @@ Không rút gọn, ghi đè hoặc chỉnh sai tinh thần của file này. Mọ
 - **Master style guide:** `AKV-content.md`
 - **Content dashboard:** `outputs/dashboard.html`
 - **Tạo carousel:** `python scripts/generate-carousel.py --json posts/NNN-slug/content.json --output posts/NNN-slug/carousel.pdf`
-- **Tạo infographic:** `python scripts/generate-infographic.py --reference reference/infographic-ref-1.jpeg --output posts/NNN-slug/image.png --prompt "<prompt tiếng Việt có dấu>"`
+- **Tạo infographic OpenRouter:** `python scripts/generate-infographic.py --reference reference/infographic-ref-1.jpeg --output posts/NNN-slug/image.png --prompt "<prompt tiếng Việt có dấu>"`
 - **Dựng dashboard:** `python scripts/build-dashboard.py`
 
 ---
@@ -173,17 +173,39 @@ original-image.jpg     # nếu có ảnh gốc tham chiếu
 
 ## Visual Style
 
-Vì chưa có brand guideline chính thức trong repo, dùng mặc định bảo thủ:
+Visual phải bám `context/brand-dna.md`.
 
-- Nền sáng trung tính: `#F7F4EC`
-- Chữ chính: `#1F2520`
-- Chữ phụ: `#60665F`
-- Accent xanh xây dựng: `#2F6B4F`
-- Accent vàng đất nhẹ: `#D7A84F`
-- Banner tối: `#1F2520`
-- Cảm giác: rõ ràng, chắc tay, sạch, thực tế, không neon, không quá bóng bẩy.
+DNA thị giác: **nhà ở, mái ấm, xây dựng, bất động sản, an cư, phát triển bền vững**.
 
-Visual nên gợi ngành xây nhà: bản vẽ, thước, vật liệu, khối nhà, đường grid, checklist, dấu tick, mặt cắt đơn giản. Không dùng hình ảnh quá stock hoặc quá xa rời chủ đề.
+Tinh thần:
+
+> **Chắc như nền móng. Ấm như mái nhà. Rõ như một cam kết.**
+
+Bảng màu:
+
+- Đỏ An Khang: `#E52620` — CTA, tiêu đề quan trọng, điểm nhấn chính.
+- Cam Phát Triển: `#F36B21` — đường xiên, icon, pattern, infographic.
+- Nâu Mái Nhà: `#A77A4D` — mái nhà, nền phụ, cảm giác nền móng.
+- Vàng Ánh Sáng: `#FFD500` — ô cửa, highlight nhỏ, điểm ấm tiết chế.
+- Ghi Nền Móng: `#F4F1ED` — nền social/carousel/proposal.
+- Đen Chữ Chính: `#1F1F1F` — text chính.
+
+Quy tắc: để **đỏ là vua, nâu là nền, vàng là ánh đèn nhỏ trong căn nhà**. Không dùng quá nhiều màu rực cùng lúc.
+
+Visual nên gợi logo A mái nhà: đường xiên 60 độ, mái tam giác, ô cửa vuông, ánh sáng xiên, bản vẽ, thước, vật liệu, checklist. Không dùng ảnh quá stock, neon, bóng bẩy, hoặc phong cách “sale đất nền chợ búa”.
+
+### Tạo Ảnh Qua OpenRouter
+
+Toàn bộ ảnh AI/infographic phải đi qua OpenRouter bằng `scripts/generate-infographic.py`.
+
+- API key: `OPENROUTER_API_KEY` trong `.env`.
+- Model mặc định: `google/gemini-3.1-flash-image-preview`.
+- Endpoint: OpenRouter chat completions với image output.
+- Aspect ratio mặc định: `4:5`.
+- Có thể truyền ảnh tham chiếu bằng `--reference reference/infographic-ref-1.jpeg`.
+- Không dùng provider hoặc model tạo ảnh cũ trong workflow mới.
+- Ảnh đơn/infographic sau khi tạo phải có `logo AKV.png` ở góc trái trên.
+- Carousel phải có `logo AKV.png` ở chính giữa mỗi slide, rộng 50% canvas và opacity 20%.
 
 ---
 
@@ -200,7 +222,7 @@ Visual nên gợi ngành xây nhà: bản vẽ, thước, vật liệu, khối n
 ## Workflow Theo Session
 
 1. Chạy `/prime`.
-2. Đọc `AKV-content.md` và các file `context/`.
+2. Đọc `AKV-content.md`, `context/brand-dna.md` và các file `context/`.
 3. Nếu viết nội dung: xác định nền tảng, định dạng, tệp khách hàng, mục tiêu, trụ cột, CTA.
 4. Viết nháp theo công thức: hook thẳng -> nỗi đau thật -> bóc bản chất -> ví dụ/cách kiểm tra -> lời khuyên -> câu chốt -> CTA mềm.
 5. Tự kiểm tra voice bằng `Voice Check`.

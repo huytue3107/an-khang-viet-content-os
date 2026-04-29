@@ -131,6 +131,8 @@ Báo user danh sách 10 bài gồm:
 python scripts/generate-infographic.py --reference reference/infographic-ref-1.jpeg --output posts/NNN-slug/image.png --prompt "<prompt tiếng Việt có dấu>"
 ```
 
+Script này dùng OpenRouter với model mặc định `google/gemini-3.1-flash-image-preview`. Không dùng provider tạo ảnh cũ trong workflow mới.
+
 ### Carousel
 
 ```powershell
