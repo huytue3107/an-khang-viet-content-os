@@ -52,15 +52,15 @@ Các hướng có thể dùng tùy ngữ cảnh:
 
 ## Bảng Màu Chuẩn
 
-| Tên màu | HEX | Ý nghĩa | Cách dùng |
-| --- | --- | --- | --- |
-| Đỏ An Khang | `#E52620` | Năng lượng, quyết tâm, nổi bật | Logo chữ, CTA, tiêu đề quan trọng, cảnh báo |
-| Cam Phát Triển | `#F36B21` | Tăng trưởng, chuyển động | Icon, đường nhấn, pattern, infographic |
-| Nâu Mái Nhà | `#A77A4D` | Đất, nền móng, bền vững | Mảng nền phụ, mái nhà, ấn phẩm trầm |
-| Vàng Ánh Sáng | `#FFD500` | Hơi ấm, gia đình, hy vọng | Cửa sổ, highlight nhỏ, điểm sáng tiết chế |
-| Trắng An Tâm | `#FFFFFF` | Sạch, rõ, tin cậy | Nền chính |
-| Ghi Nền Móng | `#F4F1ED` | Trung tính, ấm, bền | Nền social, proposal, carousel |
-| Đen Chữ Chính | `#1F1F1F` | Rõ, chắc, dễ đọc | Text chính |
+| Tên màu        | HEX       | Ý nghĩa                        | Cách dùng                                   |
+| -------------- | --------- | ------------------------------ | ------------------------------------------- |
+| Đỏ An Khang    | `#E52620` | Năng lượng, quyết tâm, nổi bật | Logo chữ, CTA, tiêu đề quan trọng, cảnh báo |
+| Cam Phát Triển | `#F36B21` | Tăng trưởng, chuyển động       | Icon, đường nhấn, pattern, infographic      |
+| Nâu Mái Nhà    | `#A77A4D` | Đất, nền móng, bền vững        | Mảng nền phụ, mái nhà, ấn phẩm trầm         |
+| Vàng Ánh Sáng  | `#FFD500` | Hơi ấm, gia đình, hy vọng      | Cửa sổ, highlight nhỏ, điểm sáng tiết chế   |
+| Trắng An Tâm   | `#FFFFFF` | Sạch, rõ, tin cậy              | Nền chính                                   |
+| Ghi Nền Móng   | `#F4F1ED` | Trung tính, ấm, bền            | Nền social, proposal, carousel              |
+| Đen Chữ Chính  | `#1F1F1F` | Rõ, chắc, dễ đọc               | Text chính                                  |
 
 Quy tắc: để **đỏ là vua, nâu là nền, vàng là ánh đèn nhỏ trong căn nhà**. Không dùng quá nhiều màu rực cùng lúc.
 
@@ -107,8 +107,10 @@ Nhóm icon ưu tiên: pháp lý, vị trí, thiết kế, thi công, bảo hành
 
 ## Logo Trong Thiết Kế Nội Dung
 
-- **Ảnh đơn/infographic:** đặt `logo AKV.png` ở góc trái trên, đủ rõ nhưng không lấn nội dung.
-- **Carousel:** đặt `logo AKV.png` ở chính giữa từng slide, kích thước bằng 50% chiều rộng canvas, opacity 20% để làm watermark.
+Ảnh chuẩn tham chiếu cho cách đặt logo và cảm giác bố cục: `outputs/logo-single-test.png`.
+
+- **Ảnh đơn/infographic/bài thường:** đặt `logo AKV.png` ở góc trái trên như mẫu `outputs/logo-single-test.png`. Logo phải đủ rõ để nhận diện nhưng không lấn tiêu đề hoặc nội dung chính. Ưu tiên khoảng cách an toàn từ mép canvas, kích thước nhỏ gọn, đóng vai trò dấu nhận diện mở bài.
+- **Carousel:** đặt `logo AKV.png` ở chính giữa từng slide, kích thước bằng 50% chiều rộng canvas, opacity 20% để làm watermark. Không dùng góc trái cho carousel trừ khi user yêu cầu riêng.
 
 ## Giọng Nói Thương Hiệu Theo Logo
 

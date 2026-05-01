@@ -3,7 +3,7 @@
 Generate an An Khang Viet infographic through OpenRouter.
 
 Default model:
-    google/gemini-3.1-flash-image-preview
+    openai/gpt-5.4-image-2
 
 Usage:
     python scripts/generate-infographic.py \
@@ -27,7 +27,7 @@ from PIL import Image
 
 
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
-DEFAULT_MODEL = "google/gemini-3.1-flash-image-preview"
+DEFAULT_MODEL = "openai/gpt-5.4-image-2"
 DEFAULT_LOGO_PATH = Path(__file__).resolve().parents[1] / "logo AKV.png"
 
 AKV_STYLE_PREFIX = """
@@ -56,7 +56,7 @@ def read_api_key():
     key = os.environ.get("OPENROUTER_API_KEY")
     if key:
         return key
-    env = load_env(Path(".env"))
+    env = load_env(Path(__file__).resolve().parents[1] / ".env")
     return env.get("OPENROUTER_API_KEY")
 
 
@@ -110,6 +110,12 @@ def request_image(api_key, model, prompt, reference_path=None, aspect_ratio="4:5
     }
     resp = requests.post(API_URL, headers=headers, json=payload, timeout=300)
     if not resp.ok:
+        if resp.status_code == 401:
+            raise RuntimeError(
+                "OpenRouter authentication failed (401). "
+                "Check that OPENROUTER_API_KEY in .env is a valid active key from https://openrouter.ai/keys. "
+                "Do not use the placeholder from .env.example."
+            )
         raise RuntimeError(f"OpenRouter request failed ({resp.status_code}): {resp.text}")
     return resp.json()
 

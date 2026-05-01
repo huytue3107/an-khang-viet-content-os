@@ -6,13 +6,13 @@ File này dùng để ghi chỉ số vận hành content. Khi chưa có số li�
 
 ## Chỉ Số Cần Theo Dõi
 
-| Nhóm | Chỉ số | Ý nghĩa |
-| --- | --- | --- |
-| Sản lượng | Số bài/tuần | Duy trì nhịp xuất bản đều |
-| Chất lượng | Số bài có checklist/câu hỏi kiểm tra | Đảm bảo nội dung có ích, đáng lưu |
-| Engagement | Lưu bài, chia sẻ, bình luận | Đo mức chạm đúng nỗi lo |
-| Conversion | Inbox tư vấn, gửi báo giá/bản vẽ | Đo khả năng tạo nhu cầu hỏi riêng |
-| Trust | Phản hồi tích cực, câu hỏi chuyên sâu | Đo niềm tin và authority |
+| Nhóm       | Chỉ số                                | Ý nghĩa                           |
+| ---------- | ------------------------------------- | --------------------------------- |
+| Sản lượng  | Số bài/tuần                           | Duy trì nhịp xuất bản đều         |
+| Chất lượng | Số bài có checklist/câu hỏi kiểm tra  | Đảm bảo nội dung có ích, đáng lưu |
+| Engagement | Lưu bài, chia sẻ, bình luận           | Đo mức chạm đúng nỗi lo           |
+| Conversion | Inbox tư vấn, gửi báo giá/bản vẽ      | Đo khả năng tạo nhu cầu hỏi riêng |
+| Trust      | Phản hồi tích cực, câu hỏi chuyên sâu | Đo niềm tin và authority          |
 
 ## KPI Khuyến Nghị Ban Đầu
 

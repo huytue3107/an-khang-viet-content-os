@@ -80,13 +80,13 @@ CTA tư vấn nhẹ
 
 ## Đặc Điểm Câu Văn
 
-| Đặc điểm | Cách dùng |
-| --- | --- |
-| Câu ngắn, chắc | “Xây nhà không giống mua cái áo. Sai thì không đổi size được.” |
-| Ngôn ngữ đời thường | “Giấy trắng mực đen còn tốt hơn lời hứa ngọt.” |
-| Cụ thể hóa rủi ro | Nói rõ vật tư, phạm vi thi công, điều kiện phát sinh, nghiệm thu |
-| Có câu chốt nhớ lâu | “Báo giá rõ là cách tôn trọng ví tiền của chủ nhà.” |
-| CTA không ép | “Nếu đang cầm bản báo giá mà vẫn lăn tăn, có thể gửi qua để được gợi ý điểm cần kiểm tra.” |
+| Đặc điểm            | Cách dùng                                                                                  |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| Câu ngắn, chắc      | “Xây nhà không giống mua cái áo. Sai thì không đổi size được.”                             |
+| Ngôn ngữ đời thường | “Giấy trắng mực đen còn tốt hơn lời hứa ngọt.”                                             |
+| Cụ thể hóa rủi ro   | Nói rõ vật tư, phạm vi thi công, điều kiện phát sinh, nghiệm thu                           |
+| Có câu chốt nhớ lâu | “Báo giá rõ là cách tôn trọng ví tiền của chủ nhà.”                                        |
+| CTA không ép        | “Nếu đang cầm bản báo giá mà vẫn lăn tăn, có thể gửi qua để được gợi ý điểm cần kiểm tra.” |
 
 ## Từ Nên Dùng
 
@@ -125,13 +125,13 @@ CTA tư vấn nhẹ
 
 ## Điều Chỉnh Voice Theo Tệp Khách Hàng
 
-| Tệp | Nên nghiêng giọng về | Tránh |
-| --- | --- | --- |
-| Gia đình trẻ xây nhà lần đầu | Dẫn đường, giải rối, thực tế ngân sách | Dạy đời hoặc chê “trẻ không biết gì” |
-| Người chọn xây trọn gói | Rõ trách nhiệm, rõ hợp đồng, rõ quy trình | Công kích nhà thầu khác |
-| Khách cao cấp | Chỉn chu, kín đáo, đáng tiền, nói về phần ẩn | Phô trương vật liệu và chữ “đẳng cấp” |
-| Cải tạo nhà cũ | Bắt bệnh, khảo sát, ưu tiên đúng hạng mục | Hứa báo giá nhanh khi chưa khảo sát |
-| Nhà đầu tư | Hiệu suất, bền, dễ vận hành, hoàn vốn | Chạy concept lạ mà không gắn dòng tiền |
-| Smarthome/nhà xanh | Tiện nghi vừa đủ, tiết kiệm năng lượng, vận hành ổn | Thần thánh hóa công nghệ |
-| Gia đình nhiều thế hệ | Hài hòa, an toàn, lâu dài, ít va chạm | Thiết kế theo người nói to nhất |
-| Nâng cấp phong cách sống | Có gu, tiết chế, cá nhân hóa có công năng | Chạy trend và decor quá tay |
+| Tệp                          | Nên nghiêng giọng về                                | Tránh                                  |
+| ---------------------------- | --------------------------------------------------- | -------------------------------------- |
+| Gia đình trẻ xây nhà lần đầu | Dẫn đường, giải rối, thực tế ngân sách              | Dạy đời hoặc chê “trẻ không biết gì”   |
+| Người chọn xây trọn gói      | Rõ trách nhiệm, rõ hợp đồng, rõ quy trình           | Công kích nhà thầu khác                |
+| Khách cao cấp                | Chỉn chu, kín đáo, đáng tiền, nói về phần ẩn        | Phô trương vật liệu và chữ “đẳng cấp”  |
+| Cải tạo nhà cũ               | Bắt bệnh, khảo sát, ưu tiên đúng hạng mục           | Hứa báo giá nhanh khi chưa khảo sát    |
+| Nhà đầu tư                   | Hiệu suất, bền, dễ vận hành, hoàn vốn               | Chạy concept lạ mà không gắn dòng tiền |
+| Smarthome/nhà xanh           | Tiện nghi vừa đủ, tiết kiệm năng lượng, vận hành ổn | Thần thánh hóa công nghệ               |
+| Gia đình nhiều thế hệ        | Hài hòa, an toàn, lâu dài, ít va chạm               | Thiết kế theo người nói to nhất        |
+| Nâng cấp phong cách sống     | Có gu, tiết chế, cá nhân hóa có công năng           | Chạy trend và decor quá tay            |

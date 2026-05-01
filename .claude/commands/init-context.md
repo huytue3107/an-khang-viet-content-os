@@ -23,16 +23,16 @@ Input có thể là:
 
 ## File Có Thể Cập Nhật
 
-| File | Khi nào cập nhật |
-| --- | --- |
-| `context/profile.md` | Có thay đổi định vị, kênh, cách xưng hô, hình ảnh thương hiệu |
-| `context/brand-dna.md` | Có thay đổi logo, màu sắc, font, slogan, moodboard hoặc quy chuẩn nhận diện |
-| `context/business.md` | Có dịch vụ, quy trình, chính sách, thông tin liên hệ thật |
-| `context/icp.md` | Có chân dung khách hàng mới hoặc insight sales |
-| `context/strategy.md` | Có mục tiêu/campaign/trụ cột ưu tiên mới |
-| `context/voice-analysis.md` | Có ví dụ bài viết thật hoặc điều chỉnh voice |
-| `context/metrics.md` | Có số liệu vận hành thật |
-| `reference/README.md` | Có visual reference hoặc brand guideline mới |
+| File                        | Khi nào cập nhật                                                            |
+| --------------------------- | --------------------------------------------------------------------------- |
+| `context/profile.md`        | Có thay đổi định vị, kênh, cách xưng hô, hình ảnh thương hiệu               |
+| `context/brand-dna.md`      | Có thay đổi logo, màu sắc, font, slogan, moodboard hoặc quy chuẩn nhận diện |
+| `context/business.md`       | Có dịch vụ, quy trình, chính sách, thông tin liên hệ thật                   |
+| `context/icp.md`            | Có chân dung khách hàng mới hoặc insight sales                              |
+| `context/strategy.md`       | Có mục tiêu/campaign/trụ cột ưu tiên mới                                    |
+| `context/voice-analysis.md` | Có ví dụ bài viết thật hoặc điều chỉnh voice                                |
+| `context/metrics.md`        | Có số liệu vận hành thật                                                    |
+| `reference/README.md`       | Có visual reference hoặc brand guideline mới                                |
 
 ## Quy Trình
 

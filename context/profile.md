@@ -48,13 +48,13 @@ Tính cách thương hiệu:
 
 ## Kênh Nội Dung
 
-| Kênh | Mức ưu tiên | Mục đích |
-| --- | --- | --- |
-| Facebook | Cao | Tạo niềm tin, tăng lưu bài, tạo inbox tư vấn |
-| TikTok/Reels | Cao | Script ngắn, hook mạnh, giải thích vấn đề xây nhà dễ hiểu |
-| Zalo | Cao | Chăm sóc lead, tư vấn gọn, nhắc checklist và quy trình |
-| Website | Trung bình | Bài tư vấn dài, case study, nội dung authority |
-| Email/Inbox | Trung bình | Tư vấn cá nhân hóa, follow-up khách đang cân nhắc |
+| Kênh         | Mức ưu tiên | Mục đích                                                  |
+| ------------ | ----------- | --------------------------------------------------------- |
+| Facebook     | Cao         | Tạo niềm tin, tăng lưu bài, tạo inbox tư vấn              |
+| TikTok/Reels | Cao         | Script ngắn, hook mạnh, giải thích vấn đề xây nhà dễ hiểu |
+| Zalo         | Cao         | Chăm sóc lead, tư vấn gọn, nhắc checklist và quy trình    |
+| Website      | Trung bình  | Bài tư vấn dài, case study, nội dung authority            |
+| Email/Inbox  | Trung bình  | Tư vấn cá nhân hóa, follow-up khách đang cân nhắc         |
 
 ## Lời Hứa Nội Dung
 

@@ -108,6 +108,7 @@ Default AKV style:
 - Vàng Ánh Sáng `#FFD500` only as small warm highlights.
 - Clean typography, high contrast.
 - Minimal roof/home-inspired geometry: A roof shape, slanted 60-degree lines, window square, grids, ruler lines, blueprint cues.
+- For carousel slides, place `logo AKV.png` in the center as a watermark, not at the top-left. Use `context/brand-dna.md` as the source of truth for logo placement.
 - No neon, no glossy real-estate hype, no cluttered “sale đất nền chợ búa” look.
 
 ## Quality Checklist

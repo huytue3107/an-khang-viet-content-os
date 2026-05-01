@@ -28,13 +28,13 @@ Khi tạo batch, không viết cả 10 bài cho cùng một nhóm. Ưu tiên ph�
 
 ### Theo Trụ Cột
 
-| Trụ cột | Số lượng | Mục tiêu |
-| --- | ---: | --- |
-| Kinh nghiệm xây nhà | 4 | Giáo dục thị trường, tăng lưu bài |
-| Cảnh báo rủi ro | 2-3 | Chạm nỗi đau, tạo tranh luận |
-| Case study/công trình thực tế | 1-2 | Chứng minh năng lực, chỉ dùng khi có dữ kiện thật |
-| Quy trình/thương hiệu AKV | 1 | Xây niềm tin, chuyển đổi inbox |
-| Bán hàng mềm | 1 | Mời tư vấn nhẹ, không quảng cáo lố |
+| Trụ cột                       | Số lượng | Mục tiêu                                          |
+| ----------------------------- | -------: | ------------------------------------------------- |
+| Kinh nghiệm xây nhà           |        4 | Giáo dục thị trường, tăng lưu bài                 |
+| Cảnh báo rủi ro               |      2-3 | Chạm nỗi đau, tạo tranh luận                      |
+| Case study/công trình thực tế |      1-2 | Chứng minh năng lực, chỉ dùng khi có dữ kiện thật |
+| Quy trình/thương hiệu AKV     |        1 | Xây niềm tin, chuyển đổi inbox                    |
+| Bán hàng mềm                  |        1 | Mời tư vấn nhẹ, không quảng cáo lố                |
 
 Nếu không có case thật, thay phần case bằng “bài học/thực tế công trình thường gặp” và ghi rõ không nêu tên/chi phí/địa điểm.
 
@@ -83,6 +83,7 @@ Với từng bài:
 **Tệp khách hàng:** [Một trong 8 tệp AKV]
 **Mục tiêu:** Tạo niềm tin / Tăng inbox / Tăng lưu bài / Giáo dục thị trường / Tạo tranh luận
 **Visual:** Ảnh công trình / AI Infographic / Carousel / Không dùng
+**Logo placement:** Bài thường/infographic dùng góc trái trên theo `outputs/logo-single-test.png`; carousel dùng logo chính giữa làm watermark theo `context/brand-dna.md`.
 **Trạng thái:** Draft
 
 ---
@@ -131,7 +132,7 @@ Báo user danh sách 10 bài gồm:
 python scripts/generate-infographic.py --reference reference/infographic-ref-1.jpeg --output posts/NNN-slug/image.png --prompt "<prompt tiếng Việt có dấu>"
 ```
 
-Script này dùng OpenRouter với model mặc định `google/gemini-3.1-flash-image-preview`. Không dùng provider tạo ảnh cũ trong workflow mới.
+Script này dùng OpenRouter với model mặc định `openai/gpt-5.4-image-2`. Không dùng provider hoặc model tạo ảnh cũ trong workflow mới.
 
 ### Carousel
 

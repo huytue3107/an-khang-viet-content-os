@@ -16,7 +16,22 @@ Không rút gọn, ghi đè hoặc chỉnh sai tinh thần của file này. Mọ
 - **Content dashboard:** `outputs/dashboard.html`
 - **Tạo carousel:** `python scripts/generate-carousel.py --json posts/NNN-slug/content.json --output posts/NNN-slug/carousel.pdf`
 - **Tạo infographic OpenRouter:** `python scripts/generate-infographic.py --reference reference/infographic-ref-1.jpeg --output posts/NNN-slug/image.png --prompt "<prompt tiếng Việt có dấu>"`
+- **Batch visual:** `python scripts/generate-all-visuals.py` — chạy lần lượt tất cả jobs trong queue
+- **Text overlay ảnh công trình:** `python scripts/add-photo-overlay.py --photo <photo> --text "<hook>" --output posts/NNN-slug/image.png`
+- **Phân loại email:** `python scripts/classify-emails.py <input_file> [--output <output_file>]`
 - **Dựng dashboard:** `python scripts/build-dashboard.py`
+
+---
+
+## Setup
+
+Sao chép `.env.example` thành `.env` và điền các API key:
+
+```text
+OPENROUTER_API_KEY=sk-or-v1-...   # OpenRouter — tạo ảnh, gọi model
+APIFY_API_KEY=apify_api_...       # Apify — scrape TikTok, YouTube, Facebook
+PEXELS_API_KEY=...                 # Pexels — ảnh/video miễn phí
+```
 
 ---
 
@@ -55,28 +70,16 @@ AI không được là:
 
 ## Đối Tượng Và Tệp Khách Hàng
 
-1. **Người chuẩn bị xây nhà lần đầu**
-   - Lo không biết bắt đầu từ đâu, dự trù ngân sách thế nào, chọn nhà thầu ra sao.
-   - Cần checklist, hướng dẫn đọc báo giá, lỗi thường gặp, thứ tự chuẩn bị.
+Khi viết, lập plan hoặc tạo batch, chọn **một tệp cụ thể** trong 8 tệp mở rộng (xem chi tiết tại `AKV-content.md` mục 3.2-3.7):
 
-2. **Người đang tìm đơn vị thiết kế/thi công trọn gói**
-   - Đang so sánh nhiều bên, dễ bị hút bởi giá rẻ, phối cảnh đẹp, lời hứa miệng.
-   - Cần tiêu chí chọn nhà thầu, hợp đồng rõ, vật tư rõ, quy trình rõ.
-
-3. **Người muốn nâng cấp phong cách sống**
-   - Quan tâm nhà đẹp nhưng phải đáng sống, dễ ở, thoáng, sáng, đủ công năng.
-   - Cần góc nhìn về thiết kế theo thói quen sinh hoạt, ánh sáng, thông gió, lưu trữ.
-
-`AKV-content.md` bản mới mở rộng thành 8 tệp khách hàng vận hành. Khi viết, lập plan hoặc tạo batch, phải chọn một tệp cụ thể:
-
-1. Gia đình trẻ Gen Y/Gen Z thành thị chuẩn bị xây căn nhà đầu tiên.
-2. Người đang tìm đơn vị thiết kế và thi công trọn gói.
-3. Chủ nhà trung lưu/thượng lưu sở hữu biệt thự, nhà phố cao cấp.
-4. Chủ nhà muốn sửa chữa, cải tạo nhà cũ trong đô thị.
-5. Nhà đầu tư bất động sản, chủ căn hộ cho thuê, homestay, nhà phố khai thác dòng tiền.
-6. Khách hàng quan tâm smarthome, nhà xanh, tiết kiệm năng lượng.
-7. Gia đình nhiều thế hệ xây nhà để ở lâu dài.
-8. Người nâng cấp phong cách sống, thích nhà đẹp, có gu, muốn cá nhân hóa.
+1. Gia đình trẻ Gen Y/Gen Z xây nhà đầu tiên.
+2. Người tìm đơn vị thiết kế và thi công trọn gói.
+3. Chủ biệt thự, nhà phố cao cấp.
+4. Chủ nhà cải tạo nhà cũ trong đô thị.
+5. Nhà đầu tư BĐS, cho thuê, homestay.
+6. Khách smarthome, nhà xanh, tiết kiệm năng lượng.
+7. Gia đình nhiều thế hệ xây nhà ở lâu dài.
+8. Người nâng cấp phong cách sống, cá nhân hóa không gian.
 
 Mỗi tệp không mua cùng một thứ: có người mua sự an tâm, có người mua sự chỉn chu, có người mua hiệu suất đầu tư, có người mua một đời sống dễ thở hơn. Nếu brief không nêu tệp, suy luận theo chủ đề/mục tiêu rồi ghi rõ giả định.
 
@@ -84,34 +87,19 @@ Mỗi tệp không mua cùng một thứ: có người mua sự an tâm, có ng�
 
 ## Trụ Cột Nội Dung
 
-1. **Kinh nghiệm xây nhà**
-   - Chuẩn bị trước khi xây, dự trù ngân sách, chọn nhà thầu, đọc báo giá, lỗi xây nhà lần đầu.
-
-2. **Cảnh báo rủi ro**
-   - Báo giá mập mờ, thi công ẩu, tráo vật tư, bán thầu, hợp đồng sơ sài, không giám sát, bảo hành không rõ.
-
-3. **Tư duy thiết kế nhà đáng sống**
-   - Công năng, ánh sáng, thông gió, lưu trữ, nhà nhiều thế hệ, thiết kế theo thói quen sống.
-
-4. **Quy trình An Khang Việt**
-   - Tư vấn ban đầu, thiết kế, báo giá, thi công, nghiệm thu, bảo hành, đồng hành sau bàn giao.
-
-5. **Case study/công trình thực tế**
-   - Bài toán của chủ nhà, giải pháp thiết kế/thi công, điểm khó, bài học. Chỉ dùng khi có dữ kiện thật.
-
-Tỉ lệ batch khuyến nghị: 40% giáo dục thị trường, 25% cảnh báo rủi ro, 15% case/công trình, 10% thương hiệu/quy trình, 10% bán hàng mềm.
+5 trụ cột và tỉ lệ batch được định nghĩa chi tiết tại `AKV-content.md` (mục 2). Batch khuyến nghị: 40% giáo dục thị trường, 25% cảnh báo rủi ro, 15% case/công trình, 10% thương hiệu/quy trình, 10% bán hàng mềm.
 
 ---
 
 ## Nền Tảng Và Định Dạng
 
-| Nền tảng | Ưu tiên | Cách viết |
-| --- | --- | --- |
-| Facebook | Cao | Bài tư vấn, cảnh báo, tranh luận nhẹ, checklist, bán hàng mềm |
-| TikTok/Reels | Cao | Script 45-60 giây, hook 0-3s, câu ngắn, dễ đọc thành lời |
-| Zalo | Cao | Gọn hơn Facebook, rõ ý, CTA tư vấn nhẹ |
-| Website | Trung bình | Bài tư vấn dài, guide, case study, nội dung tăng niềm tin |
-| Email/Inbox | Trung bình | Tư vấn cá nhân hóa, chăm sóc lead, giải thích rõ từng bước |
+| Nền tảng     | Ưu tiên    | Cách viết                                                     |
+| ------------ | ---------- | ------------------------------------------------------------- |
+| Facebook     | Cao        | Bài tư vấn, cảnh báo, tranh luận nhẹ, checklist, bán hàng mềm |
+| TikTok/Reels | Cao        | Script 45-60 giây, hook 0-3s, câu ngắn, dễ đọc thành lời      |
+| Zalo         | Cao        | Gọn hơn Facebook, rõ ý, CTA tư vấn nhẹ                        |
+| Website      | Trung bình | Bài tư vấn dài, guide, case study, nội dung tăng niềm tin     |
+| Email/Inbox  | Trung bình | Tư vấn cá nhân hóa, chăm sóc lead, giải thích rõ từng bước    |
 
 Không mặc định một bài chỉ dành cho một nền tảng. Hãy chọn nền tảng theo brief; nếu brief không nói, mặc định là Facebook và có thể repurpose sang Zalo/TikTok caption.
 
@@ -199,7 +187,7 @@ Visual nên gợi logo A mái nhà: đường xiên 60 độ, mái tam giác, ô
 Toàn bộ ảnh AI/infographic phải đi qua OpenRouter bằng `scripts/generate-infographic.py`.
 
 - API key: `OPENROUTER_API_KEY` trong `.env`.
-- Model mặc định: `google/gemini-3.1-flash-image-preview`.
+- Model mặc định: `openai/gpt-5.4-image-2`.
 - Endpoint: OpenRouter chat completions với image output.
 - Aspect ratio mặc định: `4:5`.
 - Có thể truyền ảnh tham chiếu bằng `--reference reference/infographic-ref-1.jpeg`.
@@ -216,6 +204,22 @@ Toàn bộ ảnh AI/infographic phải đi qua OpenRouter bằng `scripts/genera
 - `/implement [plan-path]` — thực thi kế hoạch đã viết.
 - `/create-10-posts` — tạo batch 10 nội dung theo tỉ lệ AKV, chưa generate visual tốn API nếu text chưa được duyệt.
 - `/init-context [input]` — cập nhật context thương hiệu từ thông tin user cung cấp, vẫn phải giữ `AKV-content.md` làm chuẩn cao nhất.
+
+### Skills Hỗ Trợ
+
+Các skill sau có sẵn và tự động kích hoạt khi phù hợp:
+
+| Skill               | Kích hoạt khi                                                     |
+| ------------------- | ----------------------------------------------------------------- |
+| `content-ideation`  | Cần brainstorm chủ đề, ý tưởng series, góc viết mới               |
+| `carousel-creation` | Cần tạo carousel/checklist dạng swipe post                        |
+| `viral-replication` | Cần copy packaging từ bài viral, thay substance bằng nội dung AKV |
+| `design`            | Cần guidance design system từ Figma styles                        |
+| `gmail-label`       | Cần đọc/phân loại/gán nhãn email Gmail                            |
+| `prime`             | Khởi tạo session, nạp style guide và context                      |
+| `create-10-posts`   | Tạo batch 10 bài theo tỉ lệ AKV\*\*                               |
+| `create-plan`       | Lập kế hoạch campaign/series/workflow                             |
+| `implement`         | Thực thi kế hoạch đã viết trong file                              |
 
 ---
 

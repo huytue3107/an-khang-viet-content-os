@@ -2,6 +2,9 @@
 .env
 .DS_Store
 
+# Local Claude worktrees
+.claude/worktrees/
+
 # Python
 __pycache__/
 *.pyc
@@ -15,6 +18,9 @@ context/data/
 
 # Outputs — generated files
 outputs/
+
+# Customer project data and construction references
+data/
 
 # Plans — kế hoạch cụ thể (optional, bỏ comment nếu muốn track)
 # plans/

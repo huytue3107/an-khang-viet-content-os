@@ -116,7 +116,7 @@ Mỗi bài nằm trong `posts/NNN-slug/post.md`:
 
 ## Visual Workflow
 
-- Infographic dùng `scripts/generate-infographic.py` qua OpenRouter, mặc định model `google/gemini-3.1-flash-image-preview`.
+- Infographic dùng `scripts/generate-infographic.py` qua OpenRouter, mặc định model `openai/gpt-5.4-image-2`.
 - Prompt tạo ảnh phải dùng tiếng Việt có dấu, style AKV, và không bịa dữ kiện kỹ thuật/giá/case.
 - Carousel dùng `scripts/generate-carousel.py`, schema `content.json` gồm `title`, `title_emphasis`, `slides`, `cta_text`, `cta_subtitle`.
 - Dashboard dùng `scripts/build-dashboard.py`, output tại `outputs/dashboard.html`.

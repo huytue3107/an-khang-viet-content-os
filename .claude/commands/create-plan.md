@@ -52,9 +52,9 @@ YYYY-MM-DD-{ten-mo-ta}.md
 
 ## Trụ Cột Và Mục Tiêu
 
-| Trụ cột AKV | Vai trò trong kế hoạch | Mục tiêu |
-| --- | --- | --- |
-| <trụ cột> | <nội dung sẽ làm> | <tạo niềm tin/tăng inbox/tăng lưu bài/...> |
+| Trụ cột AKV | Vai trò trong kế hoạch | Mục tiêu                                   |
+| ----------- | ---------------------- | ------------------------------------------ |
+| <trụ cột>   | <nội dung sẽ làm>      | <tạo niềm tin/tăng inbox/tăng lưu bài/...> |
 
 ## Đối Tượng Và Insight
 
@@ -67,21 +67,21 @@ YYYY-MM-DD-{ten-mo-ta}.md
 
 ### Nội dung/workflow cần tạo
 
-| Hạng mục | Định dạng | Nền tảng | Ghi chú |
-| --- | --- | --- | --- |
-| <tên> | <post/script/checklist/carousel/...> | <Facebook/Zalo/...> | <ghi chú> |
+| Hạng mục | Định dạng                            | Nền tảng            | Ghi chú   |
+| -------- | ------------------------------------ | ------------------- | --------- |
+| <tên>    | <post/script/checklist/carousel/...> | <Facebook/Zalo/...> | <ghi chú> |
 
 ### File mới cần tạo
 
-| Đường dẫn | Mục đích |
-| --- | --- |
+| Đường dẫn         | Mục đích   |
+| ----------------- | ---------- |
 | `path/to/file.md` | <mục đích> |
 
 ### File cần chỉnh sửa
 
-| Đường dẫn | Nội dung thay đổi |
-| --- | --- |
-| `path/to/file.md` | <mô tả> |
+| Đường dẫn         | Nội dung thay đổi |
+| ----------------- | ----------------- |
+| `path/to/file.md` | <mô tả>           |
 
 ## Quyết Định Nội Dung
 
@@ -91,6 +91,7 @@ YYYY-MM-DD-{ten-mo-ta}.md
 - **Điều không được bịa:** <giá/case/chính sách/vật tư/...>
 - **Visual:** <ảnh công trình/infographic/carousel/không dùng>
 - **Brand DNA visual:** <màu/pattern/icon/mood phù hợp nếu có visual>
+- **Logo placement:** Bài thường/infographic dùng góc trái trên theo `outputs/logo-single-test.png`; carousel dùng logo chính giữa làm watermark theo `context/brand-dna.md`.
 
 ## Các Bước Thực Hiện
 

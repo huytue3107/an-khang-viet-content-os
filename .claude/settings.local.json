@@ -1,5 +1,8 @@
 {
   "permissions": {
-    "allow": []
+    "allow": [
+      "Bash(python scripts/generate-infographic.py --help)",
+      "WebFetch(domain:xaynhatrongoihanoi.vn)"
+    ]
   }
 }

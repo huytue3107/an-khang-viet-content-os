@@ -33,6 +33,14 @@ Style AKV chính thức lấy từ `context/brand-dna.md`:
 - Mỗi slide carousel dùng watermark `logo AKV.png` ở chính giữa, rộng 50% canvas, opacity 20%.
 - Ảnh đơn/infographic dùng `logo AKV.png` ở góc trái trên.
 
+### Social Media
+
+Ba ảnh sau được sử dụng làm ảnh tham chiếu khi tạo social media posts qua OpenRouter:
+
+- `reference/Screenshot 2026-04-30 201950.png`
+- `reference/Screenshot 2026-04-30 202004.png`
+- `reference/Screenshot 2026-04-30 202016.png`
+
 ## Tư Liệu Phụ
 
 Các file ví dụ copywriting hoặc packaging cũ có thể giữ lại để học cấu trúc hook/bố cục, nhưng không còn là chuẩn giọng viết mặc định.
@@ -53,4 +61,4 @@ python scripts/generate-infographic.py `
   --prompt "Checklist 5 điều chủ nhà cần kiểm tra trước khi ký hợp đồng xây nhà..."
 ```
 
-Script dùng `OPENROUTER_API_KEY` và model mặc định `google/gemini-3.1-flash-image-preview`.
+Script dùng `OPENROUTER_API_KEY` và model mặc định `openai/gpt-5.4-image-2`.

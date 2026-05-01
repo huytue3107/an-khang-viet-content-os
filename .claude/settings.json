@@ -1,9 +1,23 @@
 {
   "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_EFFORT_LEVEL": "low",
+    "OPENROUTER_REASONING_EFFORT": "low",
+    "OPENROUTER_CONTEXT_MODEL": "x-ai/grok-4.1-fast",
+    "OPENROUTER_PLANNING_MODEL": "deepseek/deepseek-v4-pro",
+    "OPENROUTER_EXECUTION_MODEL": "deepseek/deepseek-v4-flash",
+    "OPENROUTER_VISION_MODEL": "google/gemini-2.5-pro"
   },
   "permissions": {
-    "allow": ["Bash(gh auth status)", "Bash(git init)", "Bash(git add -A)"]
+    "allow": [
+      "Bash(gh auth status)",
+      "Bash(git init)",
+      "Bash(git add -A)",
+      "Bash(Get-ChildItem -Force)",
+      "Bash(Get-ChildItem -Recurse -File -Include *.md *)",
+      "PowerShell(Get-ChildItem -Force)",
+      "PowerShell(Get-ChildItem -Recurse -File -Include *.md *)"
+    ]
   },
   "hooks": {
     "PreToolUse": [
