@@ -1,6 +1,6 @@
 ---
 name: researcher
-model: claude-sonnet-4-6
+model: deepseek/deepseek-v4-pro
 description: Thu thập và tóm tắt thông tin từ web, tài liệu, codebase. Trả về tóm tắt ngắn gọn, có cấu trúc.
 ---
 

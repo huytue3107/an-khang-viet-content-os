@@ -1,6 +1,6 @@
 ---
 name: code-reviewer
-model: claude-sonnet-4-6
+model: deepseek/deepseek-v4-pro
 description: Review code với mắt mới — tìm bugs, security issues, code smells và đề xuất cải tiến.
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: qa-tester
-model: claude-sonnet-4-6
+model: deepseek/deepseek-v4-pro
 description: Tạo test cases, chạy tests, báo cáo lỗi và đề xuất fixes. Đảm bảo chất lượng code trước khi ship.
 ---
 

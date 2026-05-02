@@ -104,7 +104,7 @@ For infographic:
 python scripts/generate-infographic.py --reference reference/infographic-ref-1.jpeg --output posts/NNN-slug/image.png --prompt "<prompt AKV tiếng Việt có dấu>"
 ```
 
-This uses OpenRouter with default model `google/gemini-3.1-flash-image-preview`. Do not use older image providers.
+This uses OpenRouter with default model `openai/gpt-5.4-image-2`. Do not use older image providers.
 
 For carousel:
 
